@@ -1,28 +1,27 @@
-Responsive_Template
+#Responsive_Template
 ===================
 
-TEMPLATE FOR RESPONSIVE WEBSITE DESIGN
+##Template for Responsive Web Design
 
 This template is to be used as a starting point for developing responsive web designs. 
 
-FEATURES
+##Features
 
--CSS reset
+* Includes jQuery, jQuery Easing, jQuery Transit, & more.
+* CSS reset
+* Built-in script to copy the main nav & automatically build the mobile nav.
+* Built-in 'sidebar' style mobile navigation.
+* Hardware Accelerated CSS transitions used instead of jQuery animations to provide silky smooth effects.
+* iOS 6 is tricked into using Hardware Acceleration. (It is diabled by default for some reason.)
+* "Fastbutton" script to remove a 300ms delay on mobile devices.
+* Responsive iFrames.
 
--Built in script to populate the mobile navigation based upon the main navigation
+##Requirements
 
--Built in 'sidebar' style mobile navigation
+* The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.
+* The site must be built fluidly. (does not require horizontal scrollbars).
 
--Hardware Accelerated CSS transitions used instead of jQuery animations to provide silky smooth effects
+##Author
 
--iOS 6 is tricked into using Hardware Acceleration (it is diabled by default for some reason)
-
--"Fastbutton" script to remove a 300ms delay on mobile devices
-
--Responsive iFrames
-
-REQUIREMENTS
-
--The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.
-
--The site must be built fluidly. (does not require horizontal scrollbars)
+Created by Kevin Thornbloom. 
+www.kthornbloom.com
