@@ -34,11 +34,11 @@ body, html {
 
 .wrap {
     width: 100%;
+    min-height: 100%;
     overflow:hidden;
     position: relative;
 }
 .wrap2 {
-    background: rgb(199, 212, 214);
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -50,25 +50,13 @@ body, html {
 .content {
     width: 100%;
     max-width: 900px;
-    background: rgb(219, 229, 231);
+    background: #fff;
     margin: 0 auto;
     color: rgb(72, 87, 95);
     line-height: 2em;
 }
 .text {
     padding:30px;
-}
-.text h1 {
-    font-size:25px;
-    margin:20px 0px;
-}
-.text h1:first-of-type {
-    margin-top:0;
-}
-.text ul {padding:0px 25px;}
-.text li { list-style: disc;}
-.text a:link, .text a:visited {
-    color:rgb(87, 125, 150);
 }
 .responsive-iframe-container {
     position: relative;
@@ -92,12 +80,11 @@ body, html {
 /* ----------------------------- */
 
 #alt-nav-wrap {
-    width: 249px;
+    width: 250px;
     height: 100%;
     position: absolute;
     color: #fff;
     box-shadow: inset -5px 0px 52px rgb(5, 5, 5);
-    border-right: 1px solid rgb(255, 255, 255);
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
@@ -107,6 +94,12 @@ body, html {
 #alt-nav-wrap ul li {    
     border-bottom: 1px solid rgb(22, 22, 22);
     border-top: 1px solid rgb(49, 49, 49);
+}
+#alt-nav-wrap ul li:first-of-type {
+    border-top:none;
+}
+#alt-nav-wrap ul li:last-of-type {
+    border-bottom:none;
 }
 #alt-nav-wrap ul a:link,
 #alt-nav-wrap ul a:visited {
@@ -152,18 +145,18 @@ body, html {
     left: 250px;
 }
 .open {
-color: rgb(59, 62, 63);
-text-decoration: none;
-font-size: 32px;
-font-weight: bold;
-line-height: 45px;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-display: none;
-outline: none;
-border-right: 1px solid rgb(219, 229, 231);
-height: 50px;
-width: 50px;
-text-align: center;
+    color: rgb(59, 62, 63);
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 45px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: none;
+    outline: none;
+    border-right: 1px solid rgb(219, 229, 231);
+    height: 50px;
+    width: 50px;
+    text-align: center;
 }
 .close {
     color: white;
@@ -221,16 +214,9 @@ text-align: center;
 }
 
 #main-nav li a:hover {
-    background: rgb(234, 240, 243);
 }
 
 #main-nav li a:active {
-}
- 
-#main-nav a.selected {
-    background:#e2bd16;
-	box-shadow:inset 0px 0px 10px #e2930b;
-	color:#000!important;
 }
  
 #main-nav ul { /* submenu */
@@ -241,16 +227,13 @@ text-align: center;
     padding:0; 
     list-style:none;
     width: 160px;
-    background:#f5f6f7;
-    box-shadow:0px 2px 4px #ccc;
-    border:2px solid white;
+    background:#fff;
     border-top:0;
 }
  
 #main-nav ul li {
     width:100%; 
     float:left; 
-    border-top:1px solid #fff;
     height: auto;
 }
  
