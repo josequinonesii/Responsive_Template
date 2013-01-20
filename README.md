@@ -5,6 +5,9 @@
 
 This template is to be used as a starting point for developing responsive web designs. 
 
+##Demo
+http://kthornbloom.com/responsive-template
+
 ##Features
 
 * Includes jQuery, jQuery Easing, jQuery Transit, & more.
