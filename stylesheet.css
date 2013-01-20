@@ -1,0 +1,288 @@
+/* ----------------------------- */
+/*        Reset/Global           */
+/* ----------------------------- */
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, 
+u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, html {
+	font-family:arial, sans-serif;
+	height:100%;
+	width:100%;
+    background: #222;
+}
+
+.wrap {
+    width: 100%;
+    overflow:hidden;
+    position: relative;
+}
+.wrap2 {
+    background: rgb(199, 212, 214);
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.content {
+    width: 100%;
+    max-width: 900px;
+    background: rgb(219, 229, 231);
+    margin: 0 auto;
+    color: rgb(72, 87, 95);
+    line-height: 2em;
+}
+.text {
+    padding:30px;
+}
+.text h1 {
+    font-size:25px;
+    margin:20px 0px;
+}
+.text h1:first-of-type {
+    margin-top:0;
+}
+.text ul {padding:0px 25px;}
+.text li { list-style: disc;}
+.text a:link, .text a:visited {
+    color:rgb(87, 125, 150);
+}
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ----------------------------- */
+/*       Mobile Navigation       */
+/* ----------------------------- */
+
+#alt-nav-wrap {
+    width: 249px;
+    height: 100%;
+    position: absolute;
+    color: #fff;
+    box-shadow: inset -5px 0px 52px rgb(5, 5, 5);
+    border-right: 1px solid rgb(255, 255, 255);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#alt-nav-wrap ul li {    
+    border-bottom: 1px solid rgb(22, 22, 22);
+    border-top: 1px solid rgb(49, 49, 49);
+}
+#alt-nav-wrap ul a:link,
+#alt-nav-wrap ul a:visited {
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    display: block;
+    padding: 10px;
+}
+#alt-nav ul li ul {
+     position: relative;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition:height 1s ease-out;
+}
+#alt-nav-wrap .has-menu:before {
+    content:'▼';
+    display: inline;
+    float:right;
+    font-size: .8em;
+    padding-top:3px;
+    color:#555;
+}
+.sub-open {
+    display: block!important;
+}
+#alt-nav-wrap ul li ul li {
+    background: rgb(15, 15, 15);
+    padding-left: 15px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid rgb(34, 34, 34);
+}
+#alt-nav-wrap ul li ul li a:link,
+#alt-nav-wrap ul li ul li a:visited {
+    color:#ccc;
+    font-size:1.1em;
+}
+.overlay-close {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    left: 250px;
+}
+.open {
+color: rgb(59, 62, 63);
+text-decoration: none;
+font-size: 32px;
+font-weight: bold;
+line-height: 45px;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+display: none;
+outline: none;
+border-right: 1px solid rgb(219, 229, 231);
+height: 50px;
+width: 50px;
+text-align: center;
+}
+.close {
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(114, 114, 114);
+    border-radius: 20px;
+    padding-top: 6px;
+    display: inline-block;
+    margin: 20px 10px;
+    height: 30px;
+    width: 36px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    font-size: 25px;
+}
+/* ----------------------------- */
+/*          Dropdowns            */
+/* ----------------------------- */
+
+.clear {clear:both} 
+#main-nav-wrap {
+    background: #fff;
+}
+#main-nav {
+    text-align: center;
+}
+#main-nav .has-menu:after {
+    content:' ▼';
+    position: absolute;
+    right: 5px;
+    font-size:8px;
+    color:#ccc;
+}
+.has-menu {
+    padding-right:20px!important;
+}
+
+#main-nav li { 
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    position:relative;
+    z-index:500; 
+    height: 50px;
+    text-align: left;
+}
+     
+#main-nav li a { /* parent menu */
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 10px 0px 10px;
+    height: 40px;
+}
+
+#main-nav li a:hover {
+    background: rgb(234, 240, 243);
+}
+
+#main-nav li a:active {
+}
+ 
+#main-nav a.selected {
+    background:#e2bd16;
+	box-shadow:inset 0px 0px 10px #e2930b;
+	color:#000!important;
+}
+ 
+#main-nav ul { /* submenu */
+    position:absolute; 
+    left:0; 
+    display:none; 
+    margin:0 0 0 -1px; 
+    padding:0; 
+    list-style:none;
+    width: 160px;
+    background:#f5f6f7;
+    box-shadow:0px 2px 4px #ccc;
+    border:2px solid white;
+    border-top:0;
+}
+ 
+#main-nav ul li {
+    width:100%; 
+    float:left; 
+    border-top:1px solid #fff;
+    height: auto;
+}
+ 
+#main-nav ul a {
+    display:block;  
+    height: auto;
+    padding: 3px 5px; 
+    color:#666;
+    border:0;
+    font-size:12px;
+    font-family: arial, sans-serif;
+}
+ 
+#main-nav ul a:hover {
+
+}
+
+*html #main-nav ul { /* fix ie6 */
+	color:#000;
+	text-shadow:none;
+}
+
+/* ----------------------------- */
+/*           Responsive          */
+/* ----------------------------- */
+
+@media screen and (max-width: 600px) {
+    #main-nav {
+        display: none;
+    }
+    .open {
+        display: inline-block;
+    }
+}
+
