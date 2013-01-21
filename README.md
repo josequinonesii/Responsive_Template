@@ -3,7 +3,7 @@
 
 ##Template for Responsive Web Design
 
-This template is to be used as a starting point for developing responsive web designs. 
+This is a basic set of HTML, CSS, and jQuery that can be used as a starting point for building responsive websites. It takes care of building the mobile navigation, but leaves the overall design up to you.
 
 ##Demo
 http://kthornbloom.com/responsive-template
@@ -24,7 +24,12 @@ http://kthornbloom.com/responsive-template
 * The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.
 * The site must be built fluidly. (does not require horizontal scrollbars).
 
-##Author
+##Licensing
+Free to use & abuse
+
+##Help & Feedback
+Connect with me on twitter: https://twitter.com/kthornbloom
 
 Created by Kevin Thornbloom. 
+
 www.kthornbloom.com
