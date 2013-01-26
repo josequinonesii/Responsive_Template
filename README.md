@@ -3,11 +3,9 @@
 
 ##Description
 
-<<<<<<< HEAD
-This is a basic set of HTML, CSS, and jQuery that can be used as a starting point for building responsive websites. It takes care of building the mobile navigation, but leaves the overall design up to you.
-=======
+
 This template is to be used as a starting point for developing responsive web designs. Resize the example on a desktop to see the nav change, or just check it out on your mobile device.
->>>>>>> Updates
+
 
 ##Demo
 http://kthornbloom.com/responsive-template
@@ -28,20 +26,15 @@ http://kthornbloom.com/responsive-template
 - The site must be built fluidly. (does not require horizontal scrollbars).
 - In mobile view, the page content should preferably be longer than the navigation sidebar for best effect.
 
-<<<<<<< HEAD
 ##Licensing
 Free to use & abuse
 
 ##Help & Feedback
-Connect with me on twitter: https://twitter.com/kthornbloom
+Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twitter.</a>
 
-Created by Kevin Thornbloom. 
-
-www.kthornbloom.com
-=======
 ##Credits
 
-- This template compiled by <a href="http://www.kthornbloom.com">Kevin Thornbloom</a>
-- <a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/">Responsive iFrames</a>
-- <a href="https://github.com/alexblack/google-fastbutton">Google Fastbutton</a>
->>>>>>> Updates
+- This template compiled by <a href="http://www.kthornbloom.com"  target="_blank">Kevin Thornbloom</a>
+- <a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/"  target="_blank">Responsive iFrames</a>
+- <a href="https://github.com/alexblack/google-fastbutton"  target="_blank">Google Fastbutton</a>
+
