@@ -1,11 +1,25 @@
+function mainmenu(){
+	$(" #main-nav ul ").css({display: "none"});
+	// Main dropdown functions
+	$(" #main-nav li").hover(function(){
+        $(this).find('ul:first').slideDown('fast', 'easeOutExpo');
+        },function(){
+        $(this).find('ul:first').slideUp('fast', 'easeOutExpo');
+    });
+}
+
 $(document).ready(function() {
-
+		// Start main nav dropdown function
+		mainmenu();
+		$('#main-nav li:has(> ul)').addClass('parent');
+		// Save main nav html
 		var navHtml = $('#main-nav').html();
-
-
+		// Populate mobile nav html
 		$('#alt-nav').html(navHtml);
-
-		$('.has-menu').parent().find('ul').slideUp();
+		// Toggle mobile nav dropdown indicators
+		$('#alt-nav .parent').click(function(){
+			$(this).toggleClass('parent-up');
+		})
 
 		// Set some defaults
 		$('#alt-nav-wrap, .wrap2, .sub').transition({ 
@@ -40,20 +54,13 @@ $(document).ready(function() {
 		});
 
 		// Mobile Sub Menus
-		$('.has-menu').fastClick(function(e) {
-			event.preventDefault();
-			$(this).parent().find('ul').toggle();
+		$('#alt-nav li').fastClick(function(e) {
+			$(this).find('ul:first').toggle();
 		});
 
-		// Main Drop Downs
-		    $('#main-nav li').hover(
-        function () {
-            //show submenu
-            $('ul', this).slideDown(100);
- 
-        }, 
-        function () {
-            //hide submenu
-            $('ul', this).slideUp(100);         
-        });
+	
 	});
+
+
+
+
