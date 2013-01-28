@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 		// Open Mobile Nav
 		$('.open').fastClick(function(e) {
+			$('#alt-nav-wrap').show();
 			$('.wrap2').transition({ 
 				x: '250px'
     			}, 500, 'ease');
