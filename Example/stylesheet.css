@@ -40,7 +40,7 @@ body, html {
     position: relative;
 }
 .wrap2 {
-    background: rgb(213, 217, 218);
+    background: rgb(65, 65, 65);
     /* THIS BACKGROUND COLOR IS FOR THE PAGE BG */
     width: 100%;
     height: 100%;
@@ -53,43 +53,12 @@ body, html {
 .content {
     width: 100%;
     max-width: 900px;
-    background: rgb(240, 240, 240);
+    background: white;
     margin: 0 auto;
     color: rgb(72, 87, 95);
     line-height: 2em;
 }
-.text {
-    padding:30px;
-}
-.text h1 {
-    font-size:25px;
-    margin:20px 0px;
-}
-.text h1:first-of-type {
-    margin-top:0;
-}
-.text ul {padding:0px 25px;}
-.text li { list-style: disc;}
-.text a:link, .text a:visited {
-    color:rgb(87, 125, 150);
-}
-.responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
 
-.responsive-iframe-container iframe,   
-.vresponsive-iframe-container object,  
-.vresponsive-iframe-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 /* ----------------------------- */
 /*       Mobile Navigation       */
 /* ----------------------------- */
@@ -222,7 +191,7 @@ body, html {
     background-repeat: no-repeat;
 }
 /* ----------------------------- */
-/*          Dropdowns            */
+/*        Main Navigation        */
 /* ----------------------------- */
 
 #main-nav-wrap {
@@ -311,7 +280,75 @@ body, html {
 #main-nav ul .parent {
     background:url('images/nav-arrow.png') right no-repeat;
 }
+/* ----------------------------- */
+/*   NON ESSENTIAL STYLES BELOW  */
+/* ----------------------------- */
 
+.text {
+    padding:30px;
+}
+.text h1 {
+    font-size:25px;
+    margin:20px 0px;
+    font-weight: bold;
+    clear:both;
+    color:rgb(92, 149, 235)
+}
+.text h2 {
+    font-size: 22px;
+    margin: 15px 0px;
+    clear: both;
+    color: rgb(92, 149, 235);
+    clear: both;
+}
+.text h1:first-of-type {
+    margin-top:0;
+}
+.text ul {
+    padding:15px; 
+    background:rgb(241, 241, 241);
+    border-radius:3px;
+    font-size: .9em;
+    line-height: 1.5em;
+}
+.text li { 
+    list-style: circle;
+    margin-left:25px;
+}
+.text a:link, .text a:visited {
+    color:rgb(87, 125, 150);
+}
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin: 30px -30px;
+}
+.page-image {
+    max-width:100% !important;
+    height:auto;
+    display:block;
+    float:left;
+    margin:0px 15px 15px 0px;
+    border-radius:5px;
+}
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe,   
+.vresponsive-iframe-container object,  
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* ----------------------------- */
 /*           Responsive          */
 /* ----------------------------- */

@@ -35,6 +35,7 @@
 
 <!-- CSS ====================================================== --> 
 	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="responsive-tables.css">
 
 
 
@@ -109,37 +110,105 @@
 			<div class="text">
 				<h1>Template for Responsive Website Development</h1>
 
-				This template is to be used as a starting point for developing responsive web designs. Resize this example on a desktop to see the nav change, or just check it out on your mobile device.<br><a href="https://github.com/kthornbloom/Responsive_Template" target="_blank">View Project on Github</a>
+				This template is to be used as a starting point for developing responsive web designs. Resize this example on a desktop to see the nav change, or just check it out on your mobile device.<br>
+				› <a href="https://github.com/kthornbloom/Responsive_Template" target="_blank">View Project on Github</a>
 
-				<h1>Features</h1>
+				<h2>Features</h2>
 				<ul>
 					
 					<li><b>Automatically</b> creates a sidebar style mobile menu</li>
+					<li><b>Examples included</b> for responsive iframes, photos, and tables.</li>
 					<li><b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.</li>
 					<li><b>iOS 6</b> is tricked into using Hardware Acceleration. (It is disabled by default for some reason.)</li>
 					<li><b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.</li>
-					<li><b>Great response times</b> due to a script that removed a 300ms standard delay on mobile devices.</li>
-					<li><b>Responsive iFrame</b> code included.</li>
-					<li><b>Includes</b> jQuery, jQuery Easing, jQuery Transit, & more.
+					<li><b>Improved response times</b> due to a script that removed a 300ms standard delay on mobile devices.</li>
+					<li><b>Includes</b> jQuery, jQuery Easing, jQuery Transit, & more.</li>
 				</ul>
 
-				<h1>Requirements</h1>
+				<h2>Requirements</h2>
 				<ul>
 					<li>The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.</li>
 					<li>The site must be built fluidly. (does not require horizontal scrollbars).</li>
 					<li>In mobile view, the page content should preferably be longer than the navigation sidebar for best effect.</li>
 				</ul>
+				<hr>
+				<h1>Let's do some testing!</h1>
 
-				<h1>Responsive iFrame Test</h1>
+				<h2>Responsive image Test</h2>
+
+				<img src="images/photo.jpg" class="page-image"/>
+				<hr>
+
+				<h2>Responsive iFrame Test</h2>
 
 				<!-- Responsive iFrame -->
 				<div class="responsive-iframe-container">
 				    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=eiffle+tower&amp;ie=UTF8&amp;hl=en&amp;hq=eiffle+tower&amp;hnear=&amp;radius=15000&amp;ll=48.858278,2.294254&amp;spn=0.009967,0.009184&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=10222232094831998944&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?q=eiffle+tower&amp;ie=UTF8&amp;hl=en&amp;hq=eiffle+tower&amp;hnear=&amp;radius=15000&amp;ll=48.858278,2.294254&amp;spn=0.009967,0.009184&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=10222232094831998944&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 				</div><!-- end map -->
+				<hr>
+				<h2>Responsive Table Test</h2>
+				<table class="responsive">
+    				
+					<tr>
+						<th>Header 1</th>
+						<th>Header 2</th>
+						<th>Header 3</th>
+						<th>Header 4</th>
+						<th>Header 5</th>
+						<th>Header 6</th>
+						<th>Header 7</th>
+						<th>Header 8</th>
+					</tr>
+					<tr>
+						<td>row 1, cell 1</td>
+						<td>row 1, cell 2</td>
+						<td>row 1, cell 3</td>
+						<td>row 1, cell 4</td>
+						<td>row 1, cell 5</td>
+						<td>row 1, cell 6</td>
+						<td>row 1, cell 7</td>
+						<td>row 1, cell 8</td>
+					</tr>
+					<tr>
+						<td>row 2, cell 1</td>
+						<td>row 2, cell 2</td>
+						<td>row 2, cell 3</td>
+						<td>row 2, cell 4</td>
+						<td>row 2, cell 5</td>
+						<td>row 2, cell 6</td>
+						<td>row 2, cell 7</td>
+						<td>row 2, cell 8</td>
+					</tr>
+					<tr>
+						<td>row 3, cell 1</td>
+						<td>row 3, cell 2</td>
+						<td>row 3, cell 3</td>
+						<td>row 3, cell 4</td>
+						<td>row 3, cell 5</td>
+						<td>row 3, cell 6</td>
+						<td>row 3, cell 7</td>
+						<td>row 3, cell 8</td>
+					</tr>
+					<tr>
+						<td>row 4, cell 1</td>
+						<td>row 4, cell 2</td>
+						<td>row 4, cell 3</td>
+						<td>row 4, cell 4</td>
+						<td>row 4, cell 5</td>
+						<td>row 4, cell 6</td>
+						<td>row 4, cell 7</td>
+						<td>row 4, cell 8</td>
+					</tr>
+      			</table>
+      			<hr>
+      			<h2>Responsive Navigation Test</h2>
+      			The navigation at the top of this page contains multiple drop-downs. Resizing this page smaller, or viewing on a mobile device will cause the main navigation to hide. An icon will appear that, when clicked, will open a panel with the navigation links.
+      			<hr>
 				<h1>Credits</h1>
 					<ul>
-						<li><a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/">Responsive iFrames</a></li>
-						<li><a href="https://github.com/alexblack/google-fastbutton">Google Fastbutton</a></li>
+						<li><a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/" target="_blank">Responsive iFrames</a></li>
+						<li><a href="https://github.com/alexblack/google-fastbutton" target="_blank">Google Fastbutton</a></li>
+						<li><a href="http://www.zurb.com/playground/responsive-tables" target="_blank">Zurb Responsive Tables</a></li>
 						<li>This page created by <a href="http://kthornbloom.com">Kevin Thornbloom</a></li>
 					</ul>
 			</div><!-- end .text -->
@@ -153,6 +222,7 @@
 	<script type="text/javascript" src="js/transit.js"></script>
 	<script type="text/javascript" src="js/google.fastbutton.js"></script>
 	<script type="text/javascript" src="js/jquery.fastbutton.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type="text/javascript" src="js/responsive-tables.js"></script>
 </body>
 </html>

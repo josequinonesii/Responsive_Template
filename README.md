@@ -13,11 +13,11 @@ http://kthornbloom.com/responsive-template
 ##Features
 
 - <b>Automatically</b> creates a sidebar style mobile menu
+- <b>Examples included</b> for responsive iframes, photos, and tables.
 - <b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.
 - <b>iOS 6</b> is tricked into using Hardware Acceleration. (It is disabled by default for some reason.)
 - <b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.
-- <b>Great response times</b> due to a script that removed a 300ms standard delay on mobile devices.
-- <b>Responsive iFrame</b> code included.
+- <b>Improved response times</b> due to a script that removed a 300ms standard delay on mobile devices.
 - <b>Includes</b> jQuery, jQuery Easing, jQuery Transit, & more.
 
 ##Requirements
@@ -37,4 +37,5 @@ Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twi
 - This template compiled by <a href="http://www.kthornbloom.com"  target="_blank">Kevin Thornbloom</a>
 - <a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/"  target="_blank">Responsive iFrames</a>
 - <a href="https://github.com/alexblack/google-fastbutton"  target="_blank">Google Fastbutton</a>
+- <a href="http://www.zurb.com/playground/responsive-tables" target="_blank">Zurb Responsive Tables</a>
 
