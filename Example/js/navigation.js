@@ -3,6 +3,18 @@ function mainmenu(){
 	// Main dropdown functions
 	$(" #main-nav li").hover(function(){
         $(this).find('ul:first').slideDown('fast', 'easeOutExpo');
+        	var elm = $('ul:first', this);
+		    var off = elm .offset();
+		    var l = off.left;
+		    var w = elm.width();
+		    var docW = $(".wrap2").width();
+		    var isEntirelyVisible = (l+ w <= docW);
+
+		    if ( ! isEntirelyVisible ) {
+		        $(this).find('ul').addClass('edge');
+		    } else {
+		        $(this).removeClass('edge');
+		    }
         },function(){
         $(this).find('ul:first').slideUp('fast', 'easeOutExpo');
     });
@@ -11,13 +23,16 @@ function mainmenu(){
 $(document).ready(function() {
 		// Start main nav dropdown function
 		mainmenu();
+		$('ul.main-nav > li').addClass('top_level');
+		$('#main-nav ul').addClass('dropdown_1');
+		$('.dropdown_1 ul').addClass('dropdown_2').removeClass('dropdown_1');
 		$('#main-nav li:has(> ul)').addClass('parent');
 		// Save main nav html
 		var navHtml = $('#main-nav').html();
 		// Populate mobile nav html
 		$('#alt-nav').html(navHtml);
 		// Toggle mobile nav dropdown indicators
-		$('#alt-nav .parent').click(function(){
+		$('#alt-nav .parent').not($(this).parent()).click(function(){
 			$(this).toggleClass('parent-up');
 		})
 
@@ -55,9 +70,10 @@ $(document).ready(function() {
 		});
 
 		// Mobile Sub Menus
-		$('#alt-nav li').fastClick(function(e) {
-			$(this).find('ul:first').toggle();
-		});
+		$(" #alt-nav .parent").click(function(f){
+        $(this).find('ul:first').slideToggle();
+        f.stopPropagation();
+        });
 
 	
 	});
