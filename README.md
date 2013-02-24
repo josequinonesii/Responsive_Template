@@ -4,11 +4,11 @@
 ##Description
 
 
-This template is to be used as a starting point for developing responsive web designs. Resize the example on a desktop to see the nav change, or just check it out on your mobile device.
+This template is to be used as a starting point for developing responsive web designs. This is for front end developers who have a good understanding of how to build a site, and just prefer a starting point. Resize this demo on a computer to see the nav change, or just check it out on your mobile device.
 
 
 ##Demo
-http://kthornbloom.com/responsive-template
+http://kthornbloom.com/rwd
 
 ##Features
 
@@ -17,6 +17,7 @@ http://kthornbloom.com/responsive-template
 - <b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.
 - <b>iOS 6</b> is tricked into using Hardware Acceleration. (It is disabled by default for some reason.)
 - <b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.
+- <b>Viewport Aware</b> dropdowns that always stay visible.
 - <b>Improved response times</b> due to a script that removed a 300ms standard delay on mobile devices.
 - <b>Includes</b> jQuery, jQuery Easing, jQuery Transit, & more.
 
