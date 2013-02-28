@@ -23,7 +23,7 @@ http://kthornbloom.com/rwd
 
 ##Requirements
 
-- The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.
+- The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.(Old versions of IE should still work, but will be missing out on some of the responsive features.)
 - The site must be built fluidly. (does not require horizontal scrollbars).
 - In mobile view, the page content should preferably be longer than the navigation sidebar for best effect.
 
