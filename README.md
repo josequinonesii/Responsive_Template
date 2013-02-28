@@ -4,7 +4,7 @@
 ##Description
 
 
-This template is to be used as a starting point for developing responsive web designs. This is for front end developers who have a good understanding of how to build a site, and just prefer a starting point. Resize this demo on a computer to see the nav change, or just check it out on your mobile device.
+This template is to be used as a starting point for developing responsive web designs. This is for front end developers who have a good understanding of how to build a site, and just prefer a starting point. Resize the demo on a computer to see the nav change, or just check it out on your mobile device.
 
 
 ##Demo
@@ -39,4 +39,4 @@ Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twi
 - <a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/"  target="_blank">Responsive iFrames</a>
 - <a href="https://github.com/alexblack/google-fastbutton"  target="_blank">Google Fastbutton</a>
 - <a href="http://www.zurb.com/playground/responsive-tables" target="_blank">Zurb Responsive Tables</a>
-
+- <a href="http://ricostacruz.com/jquery.transit/" target="_blank">jQuery Transit</a>
