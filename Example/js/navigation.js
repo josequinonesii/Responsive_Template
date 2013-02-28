@@ -34,7 +34,7 @@ $(document).ready(function() {
 		// Toggle mobile nav dropdown indicators
 		$('#alt-nav .parent').not($(this).parent()).click(function(){
 			$(this).toggleClass('parent-up');
-		})
+		});
 
 		// Set some defaults
 		$('#alt-nav-wrap, .wrap2, .sub').transition({ 
