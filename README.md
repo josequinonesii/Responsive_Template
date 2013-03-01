@@ -8,7 +8,7 @@ This template is to be used as a starting point for developing responsive web de
 
 
 ##Demo
-http://kthornbloom.com/rwd
+http://rwd.kthornbloom.com/
 
 ##Features
 
