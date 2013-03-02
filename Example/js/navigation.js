@@ -31,19 +31,19 @@ $(document).ready(function() {
 		var navHtml = $('#main-nav').html();
 		// Populate mobile nav html
 		$('#alt-nav').html(navHtml);
+		$('#alt-nav .parent').prepend('<div class="indicator"></div>');
 		// Toggle mobile nav dropdown indicators
-		$('#alt-nav .parent').not($(this).parent()).click(function(){
-			$(this).toggleClass('parent-up');
-		});
+		$('#alt-nav .indicator').not($(this).parent()).click(function(){
+			$(this).toggleClass('indicator-up');
+		})
 
 		// Set some defaults
 		$('#alt-nav-wrap, .wrap2, .sub').transition({ 
     			rotateY: '0deg' // to invoke hardware accel. on iOS6+
     			}, 0);
-		$('#alt-nav-wrap').css({ transformOrigin: '0px 0px' });
+		$('#alt-nav-wrap').css({ transformOrigin: '0px 0px'});
 		$('#alt-nav-wrap').transition({ 
-			    scale: '.8',
-			    opacity: '0'
+			    scale: [0, 1]
 			}, 0, 'ease');
 
 		// Open Mobile Nav
@@ -51,27 +51,28 @@ $(document).ready(function() {
 			$('#alt-nav-wrap').show();
 			$('.wrap2').transition({ 
 				x: '250px'
-    			}, 500, 'ease');
+    			}, 900, 'snap');
 			$('.overlay-close').show();
 			$('#alt-nav-wrap').transition({ 
-			    scale: '1',
-			    opacity: '1'
-			}, 300, 'ease')
+			    scale: [1, 1]
+			}, 900, 'snap')
 		});
 
 		//Close Mobile Nav
 		$('.close, .overlay-close').fastClick(function(e) {
-			$('.wrap2').transition({ x: '0px' }, 500, 'ease');
+			$('.wrap2').transition({ x: '0px' }, 900, 'snap');
 			$('#alt-nav-wrap').transition({ 
-			    scale: '.8',
-			    opacity: '0'
-			}, 1000, 'ease');
-			$('.overlay-close').hide();
+			    scale: [0, 1]
+			}, 900, 'snap', function() {
+	   			$('.overlay-close').hide();
+				$('#alt-nav .dropdown_1, #alt-nav .dropdown_2').hide();
+				$('.indicator-up').removeClass('indicator-up');
+ 			});
 		});
 
 		// Mobile Sub Menus
-		$(" #alt-nav .parent").click(function(f){
-        $(this).find('ul:first').slideToggle();
+		$(" #alt-nav .indicator").click(function(f){
+        $(this).parent().find('ul:first').toggle();
         f.stopPropagation();
         });
 
