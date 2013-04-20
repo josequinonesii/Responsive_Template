@@ -14,7 +14,7 @@ http://rwd.kthornbloom.com/
 
 ##Features
 
-- <b>Automatically</b> creates a sidebar style mobile menu
+- <b>Automatically</b> copies main nav & creates the mobile nav menu.
 - <b>Examples included</b> for responsive page elements
 - <b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.
 - <b>iOS 6</b> is tricked into using Hardware Acceleration. (It is disabled by default for some reason.)
