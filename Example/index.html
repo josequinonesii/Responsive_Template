@@ -34,9 +34,12 @@
 	<meta name="msapplication-TileImage" content="path/to/tileicon.png">
 
 <!-- CSS ====================================================== --> 
-	<link rel="stylesheet" href="stylesheet.css">
-	<link rel="stylesheet" href="responsive-tables.css">
-
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/responsive-tables.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="css/font-awesome-ie7.css">
+	<![endif]-->
 
 
 </head>
@@ -44,7 +47,10 @@
 <div class="wrap">
 
 	<nav id="alt-nav-wrap">
-		<a href="#" class="close">✖</a><!-- menu close button -->
+		<a href="#" class="close">
+			Cancel
+			<i class="icon-remove-sign"></i>
+		</a><!-- menu close button -->
 		<ul id="alt-nav"><!-- mobile nav (populated by plugin) -->
 		</ul>
 	</nav>
@@ -52,11 +58,16 @@
 
 	<div class="wrap2">
 		<div class="content">
+			<div class="nav-header">
+				<a href="#" class="open"><i class="icon-reorder"></i></a>
+			</div>
 			<header>
-				<div id="logo">RWD Template</div>
+				<div id="logo">
+					<font color="#20b67a" weight="bold">	RWD</font> Template
+				</div>
 			</header>
 			<nav id="main-nav-wrap">
-				<a href="#" class="open">‹</a>
+				
 
 			<ul id="main-nav">			
 				<li><a href="http://google.com">Home</a></li>
@@ -107,7 +118,7 @@
 						</li>
 					</ul>
 				</li>
-			</ul>Demo
+			</ul>
 			</nav><!-- end #main-nav -->
 
 			
@@ -126,7 +137,7 @@
 				<ul>
 					
 					<li><b>Automatically</b> clones your main navigation and creates a mobile menu.</li>
-					<li><b>Examples included</b> for responsive iframes, photos, and tables.</li>
+					<li><b>Examples included</b> for several types of responsive elements</li>
 					<li><b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.</li>
 					<li><b>iOS 6</b> is tricked into using Hardware Acceleration. (It is disabled by default for some reason.)</li>
 					<li><b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.</li>
@@ -139,68 +150,14 @@
 				<ol>
 					<li>First <a href="https://github.com/kthornbloom/Responsive_Template" target="_blank">Download</a> the source files.</li>
 					<li>If you want to use this layout, go ahead and start styling!</li>
-					<li>If you prefer to use your own layout, just adhere to the following structure.<br>
-						<pre><code>
-&lt;html&gt;
-&lt;head&gt;
-	&lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot;&gt;
-	&lt;link rel=&quot;stylesheet&quot; href=&quot;responsive-tables.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;div class=&quot;wrap&quot;&gt;
-		&lt;nav id=&quot;alt-nav-wrap&quot;&gt;
-			&lt;a href=&quot;#&quot; class=&quot;close&quot;&gt;✖;&lt;/a&gt;
-			&lt;ul id=&quot;alt-nav&quot;&gt;
-				&lt;!-- mobile nav (populated by plugin) --&gt;
-			&lt;/ul&gt;
-		&lt;/nav&gt;
-		&lt;a class=&quot;overlay-close&quot;&gt;&lt;/a&gt;&lt;!-- click to close mobile menu --&gt;
-		&lt;div class=&quot;wrap2&quot;&gt;
-			&lt;ul id=&quot;main-nav&quot;&gt;			
-				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Link&lt;/a&gt;
-					&lt;ul&gt;
-						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sub Link&lt;/a&gt;&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/li&gt;
-				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Nav Link&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-			&lt;!-- Content Goes Here --&gt;
-		&lt;/div&gt;
-	
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.0.js&quot;&gt;&lt;/script&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/transit.js&quot;&gt;&lt;/script&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/google.fastbutton.js&quot;&gt;&lt;/script&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.fastbutton.js&quot;&gt;&lt;/script&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/navigation.js&quot;&gt;&lt;/script&gt;
-		&lt;script type=&quot;text/javascript&quot; src=&quot;js/responsive-tables.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-						</code></pre>
+					<li>If you prefer to use your own layout, just make sure to keep the wrapper divs for the mobile navigation intact. Keep content within the wrap2 div.
 					</li>
 					<li>The template will automatically take care of the mobile side of things. Be sure to check out the following examples of how to use other responsive elements.</li>
 				</ol>
 				<hr>
 				<h1>Responsive Element Tests</h1>
 				<hr>
-				<h2>Responsive Simple Slideshow Test</h2>
-				<div class="responsive-show">
 				
-					<div class="slide">
-						<img src="images/slide3.jpg"/>
-						<div class="slide-caption"/>Caption Three</div>
-					</div><!-- end .slide -->
-					<div class="slide">
-						<img src="images/slide2.jpg"/>
-						<div class="slide-caption"/>Caption Two</div>
-					</div><!-- end .slide -->
-					<div class="slide">
-						<img src="images/slide1.jpg"/>
-						<div class="slide-caption"/>Caption One</div>
-					</div><!-- end .slide -->
-			</div><!-- end .responsive-show -->
-		<hr>
 				<h2>Responsive image Test</h2>
 
 				<img src="images/photo.jpg" class="page-image"/>
@@ -276,6 +233,7 @@
 						<a href="https://github.com/alexblack/google-fastbutton" target="_blank">Google Fastbutton</a>
 						<a href="http://www.zurb.com/playground/responsive-tables" target="_blank">Zurb Responsive Tables</a>
 						<a href="stackoverflow.com" target="_blank">Stack Overflow</a>
+						<a href="http://ricostacruz.com/jquery.transit/" target="_blank">jQuery Transit</a>
 						<a href="kthornbloom.com" target="_blank">Kevin Thornbloom</a>
 						
 					
@@ -292,6 +250,5 @@
 	<script type="text/javascript" src="js/jquery.fastbutton.js"></script>
 	<script type="text/javascript" src="js/navigation.js"></script>
 	<script type="text/javascript" src="js/responsive-tables.js"></script>
-	<script type="text/javascript" src="js/responsive-slideshow.js"></script>
 </body>
 </html>

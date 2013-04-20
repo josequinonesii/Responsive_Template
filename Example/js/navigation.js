@@ -38,12 +38,14 @@ $(document).ready(function() {
 		})
 
 		// Set some defaults
+		var menuTime = 1000
 		$('#alt-nav-wrap, .wrap2, .sub').transition({ 
     			rotateY: '0deg' // to invoke hardware accel. on iOS6+
     			}, 0);
 		$('#alt-nav-wrap').css({ transformOrigin: '0px 0px'});
 		$('#alt-nav-wrap').transition({ 
-			    scale: [0, 1]
+			x: '40px',
+			opacity: 0
 			}, 0, 'ease');
 
 		// Open Mobile Nav
@@ -54,17 +56,23 @@ $(document).ready(function() {
     			}, 900, 'snap');
 			$('.overlay-close').show();
 			$('#alt-nav-wrap').transition({ 
-			    scale: [1, 1]
-			}, 900, 'snap')
+				x: '0px',
+				opacity: 1
+			}, menuTime, 'snap');
 		});
 
 		//Close Mobile Nav
 		$('.close, .overlay-close').fastClick(function(e) {
-			$('.wrap2').transition({ x: '0px' }, 900, 'snap');
+			$('.overlay-close').hide();
+			$('.wrap2').transition({
+				 x: '0px'
+			}, 900, 'snap');
 			$('#alt-nav-wrap').transition({ 
-			    scale: [0, 1]
-			}, 900, 'snap', function() {
-	   			$('.overlay-close').hide();
+				x: '40px',
+				opacity: 0
+			}, menuTime, 'snap', function() {
+
+	   			
 				$('#alt-nav .dropdown_1, #alt-nav .dropdown_2').hide();
 				$('.indicator-up').removeClass('indicator-up');
  			});
@@ -72,7 +80,7 @@ $(document).ready(function() {
 
 		// Mobile Sub Menus
 		$(" #alt-nav .indicator").click(function(f){
-        $(this).parent().find('ul:first').toggle();
+        $(this).parent().find('ul:first').slideToggle('fast');
         f.stopPropagation();
         });
 
