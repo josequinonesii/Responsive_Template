@@ -1,5 +1,7 @@
-#Responsive_Template
+#RWD Template
 ===================
+
+![RWD](http://kthornbloom.com/public/rwd.jpg)
 
 ##Description
 
@@ -13,7 +15,7 @@ http://rwd.kthornbloom.com/
 ##Features
 
 - <b>Automatically</b> creates a sidebar style mobile menu
-- <b>Examples included</b> for responsive slideshows, embedded content, photos, and tables.
+- <b>Examples included</b> for responsive page elements
 - <b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.
 - <b>iOS 6</b> is tricked into using Hardware Acceleration. (It is disabled by default for some reason.)
 - <b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.
