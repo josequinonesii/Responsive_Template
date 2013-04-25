@@ -21,7 +21,7 @@ http://rwd.kthornbloom.com/
 - <b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.
 - <b>Viewport Aware</b> dropdowns that always stay visible.
 - <b>Improved response times</b> due to a script that removed a 300ms standard delay on mobile devices.
-- <b>Includes</b> jQuery, jQuery Easing, jQuery Transit, & more.
+- <b>Includes</b> jQuery, jQuery Easing, jQuery Transit, Font Awesome & more.
 
 ##Requirements
 
@@ -42,3 +42,4 @@ Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twi
 - <a href="https://github.com/alexblack/google-fastbutton"  target="_blank">Google Fastbutton</a>
 - <a href="http://www.zurb.com/playground/responsive-tables" target="_blank">Zurb Responsive Tables</a>
 - <a href="http://ricostacruz.com/jquery.transit/" target="_blank">jQuery Transit</a>
+- <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>
