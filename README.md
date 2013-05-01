@@ -30,7 +30,8 @@ http://rwd.kthornbloom.com/
 - In mobile view, the page content should preferably be longer than the navigation sidebar for best effect.
 
 ##Licensing
-Free to use & abuse
+Free to use & abuse, although respect the licenses of the individuals listed in the credits section below.
+If you end up using this template for something, shoot me a link! I'd love to see your work.
 
 ##Help & Feedback
 Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twitter.</a>
