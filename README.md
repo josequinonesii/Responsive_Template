@@ -1,4 +1,4 @@
-#RWD Template
+#RWD Template (2.0!)
 ===================
 
 ![RWD](http://kthornbloom.com/public/rwd.jpg)
