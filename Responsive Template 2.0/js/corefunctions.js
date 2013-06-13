@@ -29,14 +29,32 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(this).addClass('indicator-active').removeClass('indicator');
 		$(this).html('<i class="icon-chevron-up"></i>');
-	    $(this).parent().parent().find('ul:first').slideToggle();
+	    $(this).parent().find('ul:first').slideToggle('fast', function() {
+	    	var sideHeight = $('.mobile-nav').height();
+	    	var viewportHeight = $(window).height();
+	    	if (sideHeight > viewportHeight) {
+	    	$('.overlay, .mobile-nav-wrap').css('height', sideHeight);
+	    	}
+	    	else {
+	    		// do nothing
+	    	}
+	    });
 	});
 
 	$('.mobile-nav .indicator-active').live("click", function() {
 		event.preventDefault();
 		$(this).addClass('indicator').removeClass('indicator-active');
 		$(this).html('<i class="icon-chevron-down"></i>');
-	    $(this).parent().parent().find('ul:first').slideToggle();
+	    $(this).parent().find('ul:first').slideToggle('fast', function() {
+	    	var sideHeight = $('.mobile-nav').height();
+	    	var viewportHeight = $(window).height();
+	    	if (sideHeight > viewportHeight) {
+	    	$('.overlay, .mobile-nav-wrap').css('height', sideHeight);
+	    	}
+	    	else {
+	    		$('.overlay, .mobile-nav-wrap').css('height', '100%');
+	    	}
+	    });
 	});
 
 
