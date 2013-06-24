@@ -163,7 +163,7 @@ body, html {
 }
 /* links */
 .main-nav > li > a:link, 
-.main-nav li a:visited {
+.main-nav > li > a:visited {
     text-decoration: none;
     color:#222;
     padding:10px;
