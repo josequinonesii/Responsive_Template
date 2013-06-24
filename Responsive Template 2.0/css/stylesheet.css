@@ -77,6 +77,7 @@ body, html {
 .content ul,
 .content ol {
     padding:15px 25px;
+    overflow:hidden; /*fix for next to floated items */
 }
 
 .content ul li {
