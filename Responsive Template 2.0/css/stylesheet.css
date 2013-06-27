@@ -125,6 +125,20 @@ body, html {
 .content tr:nth-child(2n) {
     background: #eee;
 }
+.content .form-field-text,
+.content .form-field-textarea {
+
+}
+.content .form-field-text:hover,
+.content .form-field-textarea:hover {
+
+}
+.content .form-field-submit {
+
+}
+.content .form-field-submit:hover {
+    
+}
 /* ----------------------------- */
 /*        Main Navigation        */
 /* ----------------------------- */
