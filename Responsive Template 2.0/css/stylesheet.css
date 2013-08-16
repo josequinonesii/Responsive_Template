@@ -37,6 +37,12 @@ body, html {
 .clear {
     clear:both;
 }
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
 /* ----------------------------- */
 /*          Page Styles          */
 /* ----------------------------- */
@@ -127,10 +133,10 @@ body, html {
 }
 .content .form-field-text,
 .content .form-field-textarea {
-
+	outline:none;
 }
-.content .form-field-text:hover,
-.content .form-field-textarea:hover {
+.content .form-field-text:focus,
+.content .form-field-textarea:focus {
 
 }
 .content .form-field-submit {
