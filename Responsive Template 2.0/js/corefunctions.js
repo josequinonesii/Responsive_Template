@@ -15,8 +15,10 @@ $(document).ready(function() {
 		    } else {
 		        $(this).removeClass('edge');
 		    }
+		    $(this).find('a:first').addClass('active');
         },function(){
         $(this).find('ul:first').slideUp('fast', 'easeOutExpo');
+        $(this).find('a:first').removeClass('active');
     });
 	// Find parents & add class
 	$('.main-nav li:has(> ul)').find(">:first-child").addClass('parent');
