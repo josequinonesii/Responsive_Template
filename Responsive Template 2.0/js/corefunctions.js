@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$("body").removeClass("preload");
 		// Main dropdown functions
 	$(" .main-nav li").hover(function(){
         $(this).find('ul:first').slideDown('fast', 'easeOutExpo');
