@@ -40,7 +40,6 @@ $(document).ready(function() {
 	    	else {
 	    		// do nothing
 	    	}
-	    	event.preventDefault();
 	    });
 	});
 
@@ -56,7 +55,6 @@ $(document).ready(function() {
 	    	else {
 	    		$('.overlay, .mobile-nav-wrap').css('height', '100%');
 	    	}
-	    	event.preventDefault();
 	    });
 	});
 
