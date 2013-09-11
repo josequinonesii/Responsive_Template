@@ -37,6 +37,8 @@ body, html {
 .clear {
     clear:both;
 }
+
+/* Prevent nav from animating away on page load */
 .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
@@ -285,6 +287,16 @@ body, html {
     background: linear-gradient(to right, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.75) 50%,rgba(0,0,0,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#00000000',GradientType=1 );
 }
+/* Cancel button */
+.mobile-cancel {
+    display: block;
+    background: #A83838;
+    color: #ffF;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+}
 #mobile {
     position: absolute;
     z-index: 999;
@@ -322,7 +334,13 @@ body, html {
     height: 40px;
     text-align: center;
     cursor: pointer;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid #000;
+    background: #313131;
+}
+
+.indicator:hover,
+.indicator-active:hover {
+    background:#464646;
 }
 
 /* ====== MOBILE TOP LEVEL ====== */
@@ -340,15 +358,16 @@ body, html {
 .mobile-nav > li {
     display: block;
     position: relative;
-    border-bottom: 1px solid rgb(75, 75, 75)
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 /* links */
 .mobile-nav > li > a:link, 
 .mobile-nav li a:visited {
     text-decoration: none;
     color: #fff;
-    padding: 12px 40px 12px 10px;
+    padding: 12px 40px 12px 15px;
     display: block;
+    background: #252525;
 }
 .mobile-nav > li > a:hover {
 
@@ -358,19 +377,19 @@ body, html {
 
 /* container */
 .mobile-nav > li > ul {
-    background: #404040;
+    background: #F1F1F1;
     display: none;
 }
 /*  li's */
 .mobile-nav > li > ul > li {
     position: relative;
-    border-top: 1px solid rgb(92, 92, 92);
+    border-top: 1px solid #ccc;
 }
 /* links */
 .mobile-nav > li > ul > li > a:link, 
 .mobile-nav > li > ul > li > a:visited {
     text-decoration: none;
-    color:#fff;
+    color: #818181;
     padding:12px 10px 12px 15px;
     display: block;
 }
@@ -382,13 +401,13 @@ body, html {
 
 /* container */
 .mobile-nav > li > ul > li > ul  {
-    background: #6A6A6A;
+    background: #ACACAC;
     display: none;
 }
 /* li's */
 .mobile-nav > li > ul > li > ul > li {
     position: relative;
-    border-top: 1px solid rgb(155, 155, 155);
+    border-top: 1px solid rgb(146, 146, 146);
 }
 /* links */
 .mobile-nav > li > ul > li > ul > li > a:link, 
