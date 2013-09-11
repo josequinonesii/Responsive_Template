@@ -29,10 +29,9 @@ $(document).ready(function() {
 	$('.mobile-nav .parent').parent().append('<div class="indicator"><i class="icon-chevron-down"></i></div>');
 	// Mobile Indicators
 	$('.mobile-nav .indicator').live("click", function() {
-		event.preventDefault();
 		$(this).addClass('indicator-active').removeClass('indicator');
 		$(this).html('<i class="icon-chevron-up"></i>');
-	    $(this).parent().find('ul:first').slideToggle('fast', function() {
+	    	$(this).parent().find('ul:first').slideToggle('fast', function() {
 	    	var sideHeight = $('.mobile-nav').height();
 	    	var viewportHeight = $(window).height();
 	    	if (sideHeight > viewportHeight) {
@@ -41,14 +40,14 @@ $(document).ready(function() {
 	    	else {
 	    		// do nothing
 	    	}
+	    	event.preventDefault();
 	    });
 	});
 
 	$('.mobile-nav .indicator-active').live("click", function() {
-		event.preventDefault();
 		$(this).addClass('indicator').removeClass('indicator-active');
 		$(this).html('<i class="icon-chevron-down"></i>');
-	    $(this).parent().find('ul:first').slideToggle('fast', function() {
+	    	$(this).parent().find('ul:first').slideToggle('fast', function() {
 	    	var sideHeight = $('.mobile-nav').height();
 	    	var viewportHeight = $(window).height();
 	    	if (sideHeight > viewportHeight) {
@@ -57,6 +56,7 @@ $(document).ready(function() {
 	    	else {
 	    		$('.overlay, .mobile-nav-wrap').css('height', '100%');
 	    	}
+	    	event.preventDefault();
 	    });
 	});
 
