@@ -32,7 +32,7 @@ body, html {
 	min-height:100%;
 	width:100%;
     position: relative;
-    background:#10B493;
+    background:#5BC9B7;
 }
 .clear {
     clear:both;
@@ -59,7 +59,9 @@ body, html {
 
 .content h1 {
     font-size: 2em;
+    line-height: 1em;
     margin:20px 0;
+    color:#5BC9B7;
 }
 
 .content h2 {
@@ -113,14 +115,14 @@ body, html {
     max-width: 100%;
     height: auto;
     margin:10px;
-    border-radius:10px;
+    border-radius:3px;
 }
 .content .float-left {
     float:left;
     max-width: 100%;
     height: auto;
     margin:10px;
-    border-radius:10px;
+    border-radius:3px;
 }
 .content hr {
     border:none;
@@ -155,12 +157,12 @@ body, html {
 
 /* container */
 .main-nav-wrap {
-    background:#fff;
+    background:#46B6A0;
 }
 .main-nav {
-    max-width: 900px;
-    padding:0 30px;
+    max-width: 960px;
     margin:0 auto;
+    font-size:0;
 }
 /* li's */
 .main-nav > li {
@@ -171,17 +173,19 @@ body, html {
 .main-nav > li > a:link, 
 .main-nav > li > a:visited {
     text-decoration: none;
-    color:#222;
-    padding:10px;
+    color: #ECFFF9;
+    padding: 10px;
     display: inline-block;
     position: relative;
-    font-size: 13px;
+    font-size: 16px;
+    border-right: 1px solid #66CFAE;
 }
 
 /* Hover state & 'has open dropdown' state */
 .main-nav > li > a:hover,
 .main-nav .active {
     background:#eee;
+    color:#222!important;
 }
 .main-nav .parent {
     padding-right:20px!important;
