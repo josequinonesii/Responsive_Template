@@ -187,17 +187,11 @@ body, html {
     background:#eee;
     color:#222!important;
 }
-.main-nav .parent {
-    padding-right:20px!important;
-}
 .main-nav .parent:after {
     content:'▼';
-    font-size: 8px;
-    font-weight: bold;
     display: inline-block;
-    padding:2px 5px 0 5px;
-    position: absolute;
-    right:0;
+    padding:5px 0 0 5px;
+    font-size: 9px;
 }
 /* ====== 1ST DROPDOWN  ====== */
 
