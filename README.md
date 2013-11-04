@@ -1,7 +1,5 @@
-#RWD Template (2.0!)
+#RWD Template
 ===================
-
-![RWD](http://kthornbloom.com/public/rwd.jpg)
 
 ##Description
 
