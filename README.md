@@ -1,5 +1,4 @@
 #RWD Template
-===================
 
 ##Description
 
