@@ -1,4 +1,4 @@
-#RWD Template
+#RWD Template (three point oh)
 
 ##Description
 
@@ -9,14 +9,16 @@ This template is to be used as a starting point for developing responsive web de
 ##Demo
 http://rwd.kthornbloom.com/
 
-##Features
+##Why is it Awesome?
 
-- <b>Automatically</b> copies main nav & creates the mobile nav menu.
-- <b>Examples included</b> for responsive page elements
-- <b>Hardware Accelerated</b> CSS transitions used instead of jQuery animations to provide silky smooth effects.
-- <b>Multi-Level Dropdowns</b> supported for both main & mobile navigation.
-- <b>Viewport Aware</b> dropdowns that always stay visible.
-- <b>Includes</b> jQuery, jQuery Easing, & Font Awesome.
+- Add Multi-Level Nav Dropdowns with an unordered list.
+- Automatically creates off-canvas mobile nav for small screens
+- Add a class of 'noise' to anything for a subtle image-free noise effect
+- Includes Font Awesome 4
+- Ready for many various responsive element types
+- The mobile navigation animation uses CSS3 so it's silky smooth.
+- Unlike other templates/boilerplates, it doesn't force you to use any particular layout method besides an unordered list for the navigation. Code how you want to!
+- FREE for personal, professional, or other projects. Just don't attempt to resell this as-is
 
 ##Requirements
 
@@ -35,5 +37,4 @@ Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twi
 
 - This template compiled by <a href="http://www.kthornbloom.com"  target="_blank">Kevin Thornbloom</a>
 - <a href="http://niklausgerber.com/blog/responsive-google-or-bing-maps/"  target="_blank">Responsive iFrames</a>
-- <a href="http://www.zurb.com/playground/responsive-tables" target="_blank">Zurb Responsive Tables</a>
 - <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>
