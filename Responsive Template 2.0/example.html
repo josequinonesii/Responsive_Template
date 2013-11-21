@@ -27,43 +27,42 @@
 
 <!-- CSS ====================================================== --> 
 	<link rel="stylesheet" href="css/stylesheet.css">
-	<link rel="stylesheet" href="css/responsive-tables.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 
 </head>
 <body class="preload">
-<a href="#close" class="mobile-overlay"></a>
-<div id="mobile">
-	
-	<nav class="mobile-nav-wrap">
+<a href="#" class="overlay"></a>
+<div id="mobile">	
+	<nav class="mobile-nav-wrap noise">
+		<a href="#close" class="mobile-cancel noise">Cancel <i class="fa fa-arrow-right"></i></a>
 		<ul class="mobile-nav">
 		</ul>
-		<a href="#close" class="mobile-cancel"><i class="icon-remove-sign"></i> Cancel</a>
+		
 	</nav>
 </div>
 
 
 
-<a href="#mobile" class="mobile-open"><i class="fa fa-bars"></i></a>
+<a href="#" class="open"><i class="fa fa-bars"></i></a>
 
 	<nav class="main-nav-wrap">
 	<ul class="main-nav">
-		<li><a href="#">First Link</a></li>
-		<li><a href="#">Second Link</a>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a>
 			<ul>
-				<li><a href="#">Dropdown lvl1</a></li>
-				<li><a href="#">Dropdown lvl1</a>
+				<li><a href="#">Staff</a></li>
+				<li><a href="#">Locations</a>
 					<ul>
-						<li><a href="#">Dropdown lvl2</a></li>
-						<li><a href="#">Dropdown lvl2</a></li>
-						<li><a href="#">Dropdown lvl2</a></li>
+						<li><a href="#">District 1</a></li>
+						<li><a href="#">District 2</a></li>
+						<li><a href="#">District 3</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Dropdown lvl1</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</li>
-		<li><a href="#">Third Link</a></li>
+		<li><a href="#">Support</a></li>
 	</ul>
 </nav>
 <div class="content">
@@ -76,9 +75,11 @@
 	<h2>Why is it awesome?</h2>
 		       
 	<ol>
-	   <li>Multi-level, viewport aware dropdowns</li>
-	   <li>It will automatically create off-canvas mobile navigation based upon your main navigation. Yay for less work!</li>
-	   <li>It contains code examples for several types of responsive elements</li>
+	   <li>Add Multi-Level Nav Dropdowns with an unordered list.</li>
+	   <li>Automatically creates off-canvas mobile nav for small screens</li>
+	   <li>Add a class of 'noise' to anything for a subtle image-free noise effect</li>
+	   <li><i class="fa fa-flag"></i> Includes <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome 4</a></li>
+	   <li>Ready for many various responsive element types</li>
 	   <li>The mobile navigation animation uses CSS3 so it's silky smooth.</li>
 	   <li>Unlike other templates/boilerplates, it doesn't force you to use any particular layout method besides an unordered list for the navigation. Code how you want to!</li>
 	   <li><b>FREE</b> for personal, professional, or other projects. Just don't attempt to resell this as-is</li>
@@ -97,16 +98,15 @@
 	<h2>Examples of responsive elements</h2>
 	<hr>
 	<h3>Page Images</h3>
-	<img src="images/~TEMP_page_image.jpg" class="float-left"/>
+	<img src="images/~TEMP_page_image.png" class="float-left"/>
 	I personally use classes of ".float-right" and ".float-left" for my page images. These will be placed as they're named, but will resize down smaller if needed.
 	<div class="clear"></div>
 	<hr>
-	<h3>Tables? Oh yeah.</h3>
-
-	Courtesy of <a href="http://zurb.com/playground/responsive-tables" target="_blank">Zurb</a>, just add a class of "responsive" to your tables and they'll work just fine on mobile.
+	<h3>Fix Big Fat Tables</h3>
+    The corefunctions.js file will automatically wrap a div around any table with a class of "table-wrap". This class has css values that will allow it to be scrollable if larger than 100% width.<br><br>
 	<table class="responsive" width="100%">
 		<tr>
-			<td>Table Test</td>
+			<td>HeresAReallyLongTableCellTitle</td>
 			<td>Table Test</td>
 			<td>Table Test</td>
 			<td>Table Test</td>
@@ -139,13 +139,16 @@
 	Create a div with a class of "responsive-iframe-container" and place your iframe embedded maps, videos, etc within.
 	<div class="responsive-iframe-container">
 		<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=74.856413,-93.032227&amp;spn=8.261524,31.728516&amp;t=p&amp;z=5&amp;output=embed"></iframe>
+		
 	</div>
+	<hr>
+	<h3>Need Responsive jQuery Tools?</h3>
+		I've got several free ones here: <a href="http://kthornbloom.com">kthornbloom.com</a>
 	<div class="clear"></div>
 </div>
 <!-- JS ======================================================= --> 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/responsive-tables.js"></script>
 	<script type="text/javascript" src="js/corefunctions.js"></script>
 </body>
 </html>

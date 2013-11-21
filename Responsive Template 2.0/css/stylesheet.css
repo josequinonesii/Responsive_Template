@@ -2,7 +2,48 @@
 /*        Reset/Global           */
 /* ----------------------------- */
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,img,ins,kbd,q,s,samp,small,strike,tt,var,u,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{ border-spacing:0}html{ height:100%}body,html{font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; font-weight:300;min-height:100%;width:100%; position:relative; background:#5BC9B7}body{ -webkit-transition:all .2s ease-out; -moz-transition:all .2s ease-out; -o-transition:all .2s ease-out; -ms-transition:all .2s ease-out; transition:all .2s ease-out}.clear{ clear:both}
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, img, ins, kbd, q, s, samp, small, strike, tt, var, 
+u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    border-spacing: 0;
+}
+html {
+    height:100%;
+}
+body, html {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+	min-height:100%;
+	width:100%;
+    position: relative;
+    background:#eee;
+}
+body {
+-webkit-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+   -moz-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+    -ms-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+     -o-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+        transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+}
+.clear {
+    clear:both;
+}
 
 /* Prevent nav from animating away on page load */
 .preload * {
@@ -17,16 +58,19 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 .content {
     max-width: 900px;
-    margin:15px auto;
+    margin:0 auto;
     padding:30px;
     background:#fff;
+    color:#3c3c3c;
+    font-size:18px;
+    -webkit-font-smoothing:antialiased;
     line-height: 1.5em;
 }
 
 .content h1 {
     font-size: 2em;
     line-height: 1em;
-    margin:20px 0;
+    margin:30px 0;
     color:#5BC9B7;
 }
 
@@ -80,23 +124,29 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     float:right;
     max-width: 100%;
     height: auto;
-    margin:10px;
-    border-radius:3px;
+    margin:15px 5px 5px 15px;
+    border-radius:2px;
+    box-shadow:0 0 0 5px #eee
 }
 .content .float-left {
     float:left;
     max-width: 100%;
     height: auto;
-    margin:10px;
-    border-radius:3px;
+    margin:5px 15px 15px 5px;
+    border-radius:2px;
+    box-shadow:0 0 0 5px #eee
 }
 .content hr {
     border:none;
-    border-top:1px solid #ccc;
+    border-top:1px solid #eee;
     margin:30px -30px;
+}
+.content table {
+    border-collapse:collapse;
 }
 .content td {
     border:1px solid #ccc;
+    padding:10px;
 }
 .content tr:nth-child(2n) {
     background: #eee;
@@ -123,9 +173,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* container */
 .main-nav-wrap {
-    background:#46B6A0;
+    background:#ccc;
 }
 .main-nav {
+    background:#222;
     max-width: 960px;
     margin:0 auto;
     font-size:0;
@@ -139,12 +190,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .main-nav > li > a:link, 
 .main-nav > li > a:visited {
     text-decoration: none;
-    color: #ECFFF9;
+    color: #fff;
     padding: 10px;
     display: inline-block;
     position: relative;
     font-size: 16px;
-    border-right: 1px solid #66CFAE;
 }
 
 /* Hover state & 'has open dropdown' state */
@@ -153,11 +203,17 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     background:#eee;
     color:#222!important;
 }
+.main-nav .parent {
+    padding-right:20px!important;
+}
 .main-nav .parent:after {
     content:'▼';
+    font-size: 7px;
+    font-weight: bold;
     display: inline-block;
-    padding:5px 0 0 5px;
-    font-size: 9px;
+    padding:4px 5px 0 2px;
+    position: absolute;
+    right:0;
 }
 /* ====== 1ST DROPDOWN  ====== */
 
@@ -224,35 +280,36 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /*        Mobile Navigation      */
 /* ----------------------------- */
 
-
-.mobile-bar {
-    background: #fff;
+.open {
     display: none;
-}
-.mobile-open {
-    display: none;
+    position: absolute;
     padding:10px 15px;
-    color:#fff;
+    color:#222;
     font-size: 28px;
     text-decoration: none;
 }
-.mobile-overlay {
+.overlay {
     height: 100%;
     width: 100%;
     position: absolute;
     display: none;
-    background:rgba(0,0,0,.8);
-    z-index:10;
+    background:rgb(0,0,0);
+    background:rgba(0,0,0,.4);
+    z-index:99;
 }
 /* Cancel button */
 .mobile-cancel {
     display: block;
-    background: #A83838;
-    color: #ffF;
+    background: rgb(152, 24, 24);
+    box-shadow:inset 0 -1px 0 #531111;
+    border-bottom:1px solid #6c5c5c;
+    color: #fff;
     position: relative;
-    padding: 15px;
-    text-align: center;
+    padding: 15px 10px;
     text-decoration: none;
+}
+.mobile-cancel i {
+    float:right;
 }
 #mobile {
     position: absolute;
@@ -269,26 +326,27 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .mobile-nav-wrap {
     width: 250px;
     height: 100%;
-    background:#222;
+    background: #272727;
+    box-shadow: inset -10px 0 40px #000;
 }
 .indicator,
 .indicator-active {
     color: #FFF;
     position: absolute;
-    right: 0;
-    line-height: 38px;
-    top: 0;
-    width: 40px;
-    height: 40px;
+    right: 5px;
+    line-height: 35px;
+    top: 6px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     cursor: pointer;
-    border-left: 1px solid #000;
-    background: #313131;
+    border-radius:20px;
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .indicator:hover,
 .indicator-active:hover {
-    background:#464646;
+    background:#606060;
 }
 
 /* ====== MOBILE TOP LEVEL ====== */
@@ -306,16 +364,18 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .mobile-nav > li {
     display: block;
     position: relative;
-    border-bottom: 1px solid rgb(0, 0, 0);
 }
 /* links */
 .mobile-nav > li > a:link, 
 .mobile-nav li a:visited {
     text-decoration: none;
-    color: #fff;
-    padding: 12px 40px 12px 15px;
+    color: #ccc;
     display: block;
-    background: #252525;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 49px;
+    border-bottom:1px dashed #575757;
 }
 .mobile-nav > li > a:hover {
 
@@ -325,20 +385,20 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* container */
 .mobile-nav > li > ul {
-    background: #F1F1F1;
+    background: rgba(0, 0, 0, 0.23);
     display: none;
+    box-shadow:inset 0 -1px 0px #575757, inset 0 5px 15px #222;
 }
 /*  li's */
 .mobile-nav > li > ul > li {
     position: relative;
-    border-top: 1px solid #ccc;
 }
 /* links */
 .mobile-nav > li > ul > li > a:link, 
 .mobile-nav > li > ul > li > a:visited {
     text-decoration: none;
-    color: #818181;
-    padding:12px 10px 12px 15px;
+    color: #aaa;
+    padding:0 10px 0 25px;
     display: block;
 }
 .mobile-nav > li > ul > li > a:hover {
@@ -349,20 +409,19 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* container */
 .mobile-nav > li > ul > li > ul  {
-    background: #ACACAC;
+    background: rgba(0, 0, 0, 0.24);
     display: none;
 }
 /* li's */
 .mobile-nav > li > ul > li > ul > li {
     position: relative;
-    border-top: 1px solid rgb(146, 146, 146);
 }
 /* links */
 .mobile-nav > li > ul > li > ul > li > a:link, 
 .mobile-nav > li > ul > li > ul > li a:visited {
     text-decoration: none;
-    color:#fff;
-    padding:12px 10px 12px 20px;
+    color:#777;
+    padding:0 5px 0 35px;
     display: block;
 }
 .mobile-nav > li > ul > li > ul > li > a:hover {
@@ -372,6 +431,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* ----------------------------- */
 /*             Responsive        */
 /* ----------------------------- */
+.table-wrap {
+    width:100%;
+    overflow:auto;
+}
 .responsive-iframe-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -381,8 +444,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 .responsive-iframe-container iframe,   
-.vresponsive-iframe-container object,  
-.vresponsive-iframe-container embed {
+.responsive-iframe-container object,  
+.responsive-iframe-container embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -394,7 +457,24 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     .main-nav-wrap {
         display: none;
     }
-    .mobile-open {
+    .open {
         display: block;
     }
 }
+
+.noise {
+	position: relative;
+	z-index: 1;
+	}
+		
+.noise:before, .body-noise:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-image: url(data:image/png;base64,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);
+
+	}
