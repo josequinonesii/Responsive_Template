@@ -57,8 +57,6 @@ $(document).ready(function() {
 	    });
 	});
     
-    $('table').wrap('<div class="table-wrap"></div>');
-
 	$('.open').click(function(){
 		$('html').css({
 			'overflowX':'hidden'
