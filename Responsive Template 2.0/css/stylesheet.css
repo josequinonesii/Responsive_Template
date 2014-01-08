@@ -68,27 +68,18 @@ body {
 }
 
 .content h1 {
-    font-size: 2em;
-    line-height: 1em;
-    margin:30px 0;
-    color:#222;
+    margin:25px 0;
 }
 
 .content h2 {
-    font-size: 1.5em;
-    margin:20px 0;
 }
 
 .content h3 {
-    font-size: 1em;
-    font-weight: bold;
-    margin:15px 0;
-    text-transform: uppercase;
 }
 
 .content a:link,
 .content a:visited {
-    color:#888;
+    color:#000;
 }
 .content a:hover {
     color:#222;
@@ -154,126 +145,81 @@ body {
 .content .form-field-text,
 .content .form-field-textarea {
 	outline:none;
+    border:2px solid #ccc;
+    padding:4px;
+    margin:2px 0;
 }
 .content .form-field-text:focus,
 .content .form-field-textarea:focus {
 
 }
 .content .form-field-submit {
-
+    display: block;
+    outline: none;
+    border:0;
 }
 .content .form-field-submit:hover {
-    
+    cursor: pointer;
 }
 /* ----------------------------- */
 /*        Main Navigation        */
 /* ----------------------------- */
+.main-nav {
+    max-width:900px;
+    padding:0 30px;
+    background:#585858;
+    margin:0 auto;
+}
 
-/* ====== MAIN TOP LEVEL ====== */
+.main-nav li {position:relative;}
+.main-nav ul {display:none;} /* hide until JS loads */
+.arrow {font-size:.7em;}
 
-/* container */
-.main-nav-wrap {
+/* Main Links */
+.main-nav > ul > li > a {
+    display:inline-block;
+    color:#fff;
+    text-decoration: none;
+    padding:10px;
+}
+/* has open dropdown */
+ .nav-parent {
+    background:rgba(0, 0, 0, .4)!important;
+}
+/* First level dropdowns */
+ .main-nav > ul > li {
+    display:inline-block;
+    position:relative;
+}
+.main-nav > ul > li > ul {
+    position:absolute;
+    left:0;    
     background:#ccc;
 }
-.main-nav {
-    background:#222;
-    max-width: 960px;
-    margin:0 auto;
-    font-size:0;
+.main-nav > ul > li > ul > li > a {
+    min-width:150px;
+    display:block;
+    padding:5px;
+    text-decoration:none; 
+    color:#fff;
 }
-/* li's */
-.main-nav > li {
-    display: inline-block;
-    position: relative;
-}
-/* links */
-.main-nav > li > a:link, 
-.main-nav > li > a:visited {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    display: inline-block;
-    position: relative;
-    font-size: 16px;
-}
-
-/* Hover state & 'has open dropdown' state */
-.main-nav > li > a:hover,
-.main-nav .active {
-    background:#eee;
-    color:#222!important;
-}
-.main-nav .parent {
-    padding-right:20px!important;
-}
-.main-nav .parent:after {
-    content:'▼';
-    font-size: 7px;
-    font-weight: bold;
-    display: inline-block;
-    padding:4px 5px 0 2px;
+/* Any sub-level dropdowns */
+ .main-nav > ul > li > ul ul {
     position: absolute;
-    right:0;
+    left: 100%;
+    top: 0;    
+    background: #ccc;
 }
-/* ====== 1ST DROPDOWN  ====== */
-
-/* container */
-.main-nav > li > ul {
-    display: none;
-    background: #eaeaea;
-    position: absolute;
-    width: 175px;
-    z-index: 999;
+.nav-reposition {
+    left:auto!important;
+    right:100%;
 }
-/*  li's */
-.main-nav > li > ul > li {
-    position: relative;
-}
-/* links */
-.main-nav > li > ul > li > a:link, 
-.main-nav > li > ul > li > a:visited {
-    text-decoration: none;
-    color:#222;
-    padding:10px;
-    display: block;
-    font-size: 13px;
-}
-.main-nav > li > ul > li > a:hover {
-
-}
-
-/* ====== 2nd DROPDOWN  ====== */
-
-/* container */
-.main-nav > li > ul > li > ul  {
-    display: none;
-    background: #DBDBDB;
-    position: absolute;
-    width: 175px;
-    right: -175px;
-    top:0;
-    z-index: 999;
-}
-
-/* THIS IS FOR DROPDOWNS THAT ARE CLOSE TO THE RIGHT SIDE OF THE SCREEN */
-.edge {
-    right:175px!important;
-}
-/* li's */
-.main-nav > li > ul > li > ul > li {
-    position: relative;
-}
-/* links */
-.main-nav > li > ul > li > ul > li > a:link, 
-.main-nav > li > ul > li > ul > li a:visited {
-    text-decoration: none;
-    color:#222;
-    padding:10px;
-    display: block;
-    font-size: 13px;
-}
-.main-nav > li > ul > li > ul > li > a:hover {
-
+.main-nav > ul > li > ul > li > ul a {
+    display:block;
+    min-width:150px;
+    padding:5px;
+    text-decoration:none;    
+    color:#fff;
 }
 
 /* ----------------------------- */
@@ -384,94 +330,75 @@ body {
 /* ====== 1ST DROPDOWN  ====== */
 
 /* container */
-.mobile-nav > li > ul {
+.mobile-nav > li  ul {
     background: rgba(0, 0, 0, 0.23);
     display: none;
     box-shadow:inset 0 -1px 0px #575757, inset 0 5px 15px #222;
 }
 /*  li's */
-.mobile-nav > li > ul > li {
+.mobile-nav > li > ul  li {
     position: relative;
 }
 /* links */
-.mobile-nav > li > ul > li > a:link, 
-.mobile-nav > li > ul > li > a:visited {
+.mobile-nav > li > ul > li  a:link, 
+.mobile-nav > li > ul > li  a:visited {
     text-decoration: none;
     color: #aaa;
     padding:0 10px 0 25px;
     display: block;
 }
-.mobile-nav > li > ul > li > a:hover {
+.mobile-nav > li > ul > li  a:hover {
 
 }
 
-/* ====== 2nd DROPDOWN  ====== */
-
-/* container */
-.mobile-nav > li > ul > li > ul  {
-    background: rgba(0, 0, 0, 0.24);
-    display: none;
-}
-/* li's */
-.mobile-nav > li > ul > li > ul > li {
-    position: relative;
-}
-/* links */
-.mobile-nav > li > ul > li > ul > li > a:link, 
-.mobile-nav > li > ul > li > ul > li a:visited {
-    text-decoration: none;
-    color:#777;
-    padding:0 5px 0 35px;
-    display: block;
-}
-.mobile-nav > li > ul > li > ul > li > a:hover {
-
-}
 
 /* ----------------------------- */
 /*             Responsive        */
 /* ----------------------------- */
+.responsive-table{
+    overflow:hidden;
+    border-bottom:0;
+} 
 
+.table-hider {
+    overflow:hidden;
+    padding-right:1px;
+}
+.viewtable {
+    display:block;
+    border: 2px solid #5BC9B7;
+    color: #5BC9B7!important;
+    text-align:center;
+    padding:10px;
+    text-decoration:none;
+}
+.viewtable:hover {
+    background:#5BC9B7;
+    color:#fff!important;
+}
 .responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+position: relative;
+        padding-bottom: 56.25%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
 }
 
 .responsive-iframe-container iframe,   
 .responsive-iframe-container object,  
 .responsive-iframe-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+ position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+
 }
 
 @media screen and (max-width: 600px) {
-    .main-nav-wrap {
+    .main-nav {
         display: none;
     }
     .open {
         display: block;
     }
 }
-
-.noise {
-	position: relative;
-	z-index: 1;
-	}
-		
-.noise:before, .body-noise:before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	background-image: url(data:image/png;base64,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);
-
-	}

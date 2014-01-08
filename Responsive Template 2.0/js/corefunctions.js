@@ -1,32 +1,41 @@
 $(document).ready(function() {
 	$("body").removeClass("preload");
-		// Main dropdown functions
-	$(" .main-nav li").hover(function(){
-        $(this).find('ul:first').slideDown('fast', 'easeOutExpo');
-        	var elm = $('ul:first', this);
-		    var off = elm .offset();
-		    var l = off.left;
-		    var w = elm.width();
-		    var docW = $(".main-nav").width();
-		    var isEntirelyVisible = (l+ w <= docW);
+	// Show first level nav
+	$('.main-nav > ul').show();
+	
+	// Hover
+	$(".main-nav li").hover(
+	    // Reposition if off screen
+	function () {
+	    if ($(this).find('> ul').length) {        
+	        $(this).find('> .nav-reposition').removeClass();
+	        $(this).addClass('nav-parent');
+	        $(this).find('> ul').slideDown(150);
 
-		    if ( ! isEntirelyVisible ) {
-		        $(this).find('ul').addClass('edge');
-		    } else {
-		        $(this).removeClass('edge');
-		    }
-		    $(this).find('a:first').addClass('active');
-        },function(){
-        $(this).find('ul:first').slideUp('fast', 'easeOutExpo');
-        $(this).find('a:first').removeClass('active');
-    });
-	// Find parents & add class
-	$('.main-nav li:has(> ul)').find(">:first-child").addClass('parent');
+	        var absoluteLeft = $(this).find('> ul').offset().left;
+	        var absoluteRight = absoluteLeft + $(this).outerWidth();
+	        var viewportRight = $(window).width() + $(window).scrollLeft();
+
+
+	        if (absoluteRight > viewportRight) {
+	            $(this).find('> ul').addClass('nav-reposition');
+	        } else {
+	            $(this).find('> ul').removeClass('nav-reposition');
+	        }
+	    }
+	}, function () {
+	    $(this).removeClass('nav-parent');
+	    $(this).find('> ul').stop().slideUp(150, function(){ 
+	        $(this).attr("style","overflow:visible");
+	    });
+	});
 	// Save main nav html
-	var navHtml = $('.main-nav').html();
+	var navHtml = $('.main-nav ul').html();
+	// Append down-arrows for parents
+	$('.main-nav li:has(> ul)').find(">:first-child").append(' <span class="arrow">▼</span>');
 	// Populate mobile nav html
 	$('.mobile-nav').html(navHtml);
-	$('.mobile-nav .parent').parent().append('<div class="indicator"><i class="fa fa-chevron-down"></i></div>');
+	$('.mobile-nav li:has(> ul)').find(">:first-child").parent().append('<div class="indicator"><i class="fa fa-chevron-down"></i></div>');
 	// Mobile Indicators
     $(document).on('click','.mobile-nav .indicator', function() {
 		$(this).addClass('indicator-active').removeClass('indicator');
