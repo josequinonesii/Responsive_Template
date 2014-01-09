@@ -1,4 +1,4 @@
-#RWD Template (three point oh)
+#RWD Template
 
 ##Description
 
@@ -13,7 +13,6 @@ http://rwd.kthornbloom.com/
 
 - Add Multi-Level Nav Dropdowns with an unordered list.
 - Automatically creates off-canvas mobile nav for small screens
-- Add a class of 'noise' to anything for a subtle image-free noise effect
 - Includes Font Awesome 4
 - Ready for many various responsive element types
 - The mobile navigation animation uses CSS3 so it's silky smooth.
