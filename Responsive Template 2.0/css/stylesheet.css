@@ -40,6 +40,7 @@ body {
     -ms-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
      -o-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
         transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+        left:0;
 }
 .clear {
     clear:both;
