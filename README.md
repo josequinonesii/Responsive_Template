@@ -3,7 +3,7 @@
 ##Description
 
 
-I built this tool for my own front-end development projects. My goal was to include everything I need, and strip out anything I don't. This provides a lightweight starting point for web development.
+This tool was built for my own front-end development projects. My goal was to include everything I need, and strip out anything I don't. This provides a lightweight starting point for web development.
 
 
 ##Demo
