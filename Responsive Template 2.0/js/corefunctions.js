@@ -1,97 +1,102 @@
 $(document).ready(function() {
-	$("body").removeClass("preload");
-	// Show first level nav
-	$('.main-nav > ul').show();
-	
-	// Hover
-	$(".main-nav li").hover(
-	    // Reposition if off screen
-	function () {
-	    if ($(this).find('> ul').length) {        
-	        $(this).find('> .nav-reposition').removeClass();
-	        $(this).addClass('nav-parent');
-	        $(this).find('> ul').slideDown(150);
+    // Hover Main Nav
+    $(".main-nav li").hover(
+        // Reposition if off screen
+        function() {
+            if ($(this).find('> ul').length) {
+                $(this).find('> .nav-reposition').removeClass();
+                $(this).addClass('nav-parent');
+                $(this).find('> ul').slideDown(150);
 
-	        var absoluteLeft = $(this).find('> ul').offset().left;
-	        var absoluteRight = absoluteLeft + $(this).outerWidth();
-	        var viewportRight = $(window).width() + $(window).scrollLeft();
+                var absoluteLeft = $(this).find('> ul').offset().left;
+                var absoluteRight = absoluteLeft + $(this).outerWidth();
+                var viewportRight = $(window).width() + $(window).scrollLeft();
 
+                if (absoluteRight > viewportRight) {
+                    $(this).find('> ul').addClass('nav-reposition');
+                } else {
+                    $(this).find('> ul').removeClass('nav-reposition');
+                }
+            }
+        }, function() {
+            $(this).removeClass('nav-parent');
+            $(this).find('> ul').stop().slideUp(150, function() {
+                $(this).attr("style", "overflow:visible");
+            });
+        });
+    // Save main nav html
+    var navHtml = $('.main-nav ul').html();
+    // Append down-arrows for parents
+    $('.main-nav li:has(> ul)').find(">:first-child").append(' <span class="arrow">▼</span>');
+    // Populate mobile nav html
+    $('body').append('<a href="#" id="overlay-mobile"></a><div id="mobile"><nav class="mobile-nav-wrap"><ul class="mobile-nav">' + navHtml + '</ul></nav></div><div id="mobile-btn-wrap"><a href="#" id="mobile-btn-active"><i class="fa fa-times"></i></a><a href="#" id="mobile-btn-inactive"><i class="fa fa-bars"></i></a></div>');
+    $('.mobile-nav li:has(> ul)').find(">:first-child").parent().append('<div class="indicator"><i class="fa fa-chevron-down"></i></div>');
 
-	        if (absoluteRight > viewportRight) {
-	            $(this).find('> ul').addClass('nav-reposition');
-	        } else {
-	            $(this).find('> ul').removeClass('nav-reposition');
-	        }
-	    }
-	}, function () {
-	    $(this).removeClass('nav-parent');
-	    $(this).find('> ul').stop().slideUp(150, function(){ 
-	        $(this).attr("style","overflow:visible");
-	    });
-	});
-	// Save main nav html
-	var navHtml = $('.main-nav ul').html();
-	// Append down-arrows for parents
-	$('.main-nav li:has(> ul)').find(">:first-child").append(' <span class="arrow">▼</span>');
-	// Populate mobile nav html
-	$('.mobile-nav').html(navHtml);
-	$('.mobile-nav li:has(> ul)').find(">:first-child").parent().append('<div class="indicator"><i class="fa fa-chevron-down"></i></div>');
-	// Mobile Indicators
-    $(document).on('click','.mobile-nav .indicator', function() {
-		$(this).addClass('indicator-active').removeClass('indicator');
-		$(this).html('<i class="fa fa-chevron-up"></i>');
-	    	$(this).parent().find('ul:first').slideToggle('fast', function() {
-	    	var sideHeight = $('.mobile-nav').outerHeight(),
-	    		viewportHeight = ($(window).height()+50);
-	    	if (sideHeight > viewportHeight) {
-	    		$('.overlay, .mobile-nav-wrap').css('height', sideHeight);
-	    	}
-	    });
-	});
+    // Function to make sure overlay covers the page
+    function overlayFixer() {
 
-    $(document).on('click','.mobile-nav .indicator-active', function() {
-		$(this).addClass('indicator').removeClass('indicator-active');
-		$(this).html('<i class="fa fa-chevron-down"></i>');
-	    	$(this).parent().find('ul:first').slideToggle('fast', function() {
-	    	var sideHeight = $('.mobile-nav').height();
-	    	var viewportHeight = $(window).height();
-	    	if (sideHeight > viewportHeight) {
-	    	$('.overlay, .mobile-nav-wrap').css('height', sideHeight);
-	    	}
-	    	else {
-	    		$('.overlay, .mobile-nav-wrap').css('height', '100%');
-	    	}
-	    });
-	});
-    
-	$('.open').click(function(){
-		$('html').css({
-			'overflowX':'hidden'
-		});
-		$('body').not('#mobile').css({
-	      "position": "relative",
-	      "left": "250px"
-	    });
-	    $('.mobile-nav').css({
-	    	left:'0px',
-	    	opacity: '1'
-	    });
-	    $('.overlay').show();
-	});
+        var overlayHeight = $('#overlay-mobile').height(),
+            viewportHeight = $(document).height();
+        if (viewportHeight > overlayHeight) {
 
-	$('.mobile-cancel, .overlay').click(function(){
-		$('html').css({
-			'overflowX':'auto'
-		});
-		$('body').css({
-	      "position": "relative",
-	      "left": "0px"
-	    });
-	    $('.mobile-nav').css({
-	    	left:'-50px',
-	    	opacity: '0'
-	    });
-	    $('.overlay').fadeOut();
-	});
+            $('#overlay-mobile').css('height', viewportHeight);
+        }
+    }
+
+    // Mobile opener & closer
+    $(document.body).on('click', '#mobile-btn-wrap, #overlay-mobile', function(event) {
+        var isClosed = parseInt($('#overlay-mobile').css('left'));
+        if (isClosed == 0) {
+            $('#mobile').css({
+                'transform': 'translate(0px,0px)'
+            });
+            $('#mobile-btn-wrap').css({
+                'transform': 'rotate(0deg)'
+            });
+            $('#overlay-mobile').css({
+                'opacity': '0'
+            });
+            setTimeout( function(){
+              $('#overlay-mobile').css({
+                'left': '-100%'
+            });
+            },500);
+        } else {
+            $('#mobile').css({
+                'transform': 'translate(255px,0px)'
+            });
+            $('#mobile-btn-wrap').css({
+                'transform': 'rotate(-90deg)'
+            });
+            $('#overlay-mobile').css({
+                'left': '0%',
+                'opacity': '1'
+            });
+        }
+    });
+
+    // Open First Level Mobile Menues
+    $(document).on('click', '.mobile-nav > li > .indicator', function() {
+        $('.mobile-nav ul').not($(this).parent().find('ul:first')).slideUp();
+        $(this).addClass('indicator-active').removeClass('indicator');
+        $(this).parent().find('ul:first').slideDown(function() {
+            overlayFixer();
+        });
+        $('.indicator-active').not(this).removeClass('indicator-active').addClass('indicator');
+    });
+
+    // Open Sub Level Mobile Menues
+    $(document).on('click', '.mobile-nav > li > ul .indicator', function() {
+        $(this).addClass('indicator-active').removeClass('indicator');
+        $(this).parent().find('ul:first').slideDown(function() {
+            overlayFixer();
+        });
+    });
+
+    // Close Menues
+    $(document).on('click', '.mobile-nav .indicator-active', function() {
+        $(this).addClass('indicator').removeClass('indicator-active');
+        $(this).parent().find('ul:first').slideUp();
+    });
 
 });

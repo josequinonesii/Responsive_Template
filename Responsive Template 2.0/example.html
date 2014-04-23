@@ -28,72 +28,42 @@
 <!-- CSS ====================================================== --> 
 	<link rel="stylesheet" href="css/stylesheet.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="css/autoform.css">
 
 </head>
-<body class="preload">
-<a href="#" class="overlay"></a>
-<div id="mobile">	
-	<nav class="mobile-nav-wrap">
-		<a href="#close" class="mobile-cancel">Cancel <i class="fa fa-arrow-right"></i></a>
-		<ul class="mobile-nav">
-		</ul>
-		
-	</nav>
-</div>
-
-
-
-<a href="#" class="open"><i class="fa fa-bars"></i></a>
-
+<body>
 	<nav class="main-nav">
     <ul>
-        <li><a href="#">Main One</a>
-
+        <li><a href="#">Level One A</a>
             <ul>
-                <li><a href="#">Sub One</a>
-                </li>
-                <li><a href="#">Sub One (2)</a>
-                </li>
-                <li><a href="#">Sub One (3)</a>
-                </li>
+                <li><a href="#">Level Two A</a></li>
+                <li><a href="#">Level Two B</a></li>
+                <li><a href="#">Level Two C</a></li>
             </ul>
         </li>
-        <li><a href="#">Main Two</a>
-
+        <li><a href="#">Level One B</a>
             <ul>
-                <li><a href="#">Sub Two</a>
-                </li>
-                <li><a href="#">Sub Two (2)</a>
-                </li>
-                <li><a href="#">Sub Two (3)</a>
-                </li>
+                <li><a href="#">Level Two A</a></li>
+                <li><a href="#">Level Two B</a></li>
+                <li><a href="#">Level Two C</a></li>
             </ul>
         </li>
-        <li><a href="#">Main Three</a>
-
+        <li><a href="#">Level One C</a>
             <ul>
-                <li><a href="#">Sub Three</a>
-                </li>
-                <li><a href="#">Sub Three (2)</a>
-                </li>
-                <li><a href="#">Sub Three (3)</a>
-
+                <li><a href="#">Level Two A</a></li>
+                <li><a href="#">Level Two B</a></li>
+                <li><a href="#">Level Two C</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Level One D</a>
+            <ul>
+                <li><a href="#">Level Two A</a></li>
+                <li><a href="#">Level Two B</a></li>
+                <li><a href="#">Level Two C</a>
                     <ul>
-                        <li><a href="#">Sub Sub One</a>
-                        </li>
-                        <li><a href="#">Sub Sub One (2)</a>
-                        </li>
-                        <li><a href="#">Sub Sub One (3)</a>
-                            <ul>
-                        <li><a href="#">Sub Sub One</a>
-                        </li>
-                        <li><a href="#">Sub Sub One (2)</a>
-                        </li>
-                        <li><a href="#">Sub Sub One (3)</a>
-                        </li>
-                    </ul>
-                        </li>
+                        <li><a href="#">Level Three A</a></li>
+                        <li><a href="#">Level Three B</a></li>
+                        <li><a href="#">Level Three C</a></li>
                     </ul>
                 </li>
             </ul>
@@ -104,20 +74,19 @@
 <div class="content">
     <h1>Responsive Design Template</h1>
 
-
-
-    A solid starting point for front-end developers building responsive websites. Built by <a href="http://kthornbloom.com" target="_blank">Kevin Thornbloom</a>. Resize this page for a <b>demo</b>.
+    I built this tool for my own front-end development projects. My goal was to include everything I need, and strip out anything I don't. This provides a lightweight starting point for web development. <br>
+    <i>- <a href="http://www.kthornbloom.com" target="_blank">Kevin Thornbloom</a></i>
     <hr>
     <h2>Why is it awesome?</h2>
 
     <ol>
-       <li>Add viewport aware, infinite level nav dropdowns with an unordered list.</li>
+       <li>Add nested UL's to create viewport aware, infinite level drop-downs.</li>
        <li>Automatically creates off-canvas mobile nav for small screens</li>
        <li><i class="fa fa-flag"></i> Includes <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome 4</a></li>
        <li>Ready for many various responsive element types</li>
        <li>The mobile navigation animation uses CSS3 so it's silky smooth.</li>
        <li>Unlike other templates/boilerplates, it doesn't force you to use any particular layout method besides an unordered list for the navigation. Code how you want to!</li>
-       <li><b>FREE</b> for personal, professional, or other projects. Just don't attempt to resell this as-is</li>
+       <li>Free for personal, professional, or other projects. Just don't attempt to resell this as-is</li>
     </ol>
 
     <hr>
@@ -125,15 +94,16 @@
 
     <ol>
        <li>Download the files from <a href="https://github.com/kthornbloom/Responsive_Template">Github</a></li>
-       <li>Use the given structure in index.html, but besides that- go nuts!</li>
-       <li>Use a class of "content" for the container holding your main content to take advantage of pre-written CSS hooks</li>
+       <li>Use nested UL's within the main-nav area to build your navigation, but besides that- go nuts!</li>
+       <li>You can use a class of "content" for the container holding your main content to take advantage of some pre-written CSS hooks.</li>
+       <li><i>Note: Some elements and CSS rules are for my own personal set-up.</i></li>
     </ol>
 <hr>
 
     <h2>Examples of responsive elements</h2>
     <hr>
     <h3>Page Images</h3>
-    <img src="images/~TEMP_page_image.png" class="float-left"/>
+    <img src="images/test.jpg" class="float-left"/>
     I personally use classes of ".float-right" and ".float-left" for my page images. These will be placed as they're named, but will resize down smaller if needed.
     <div class="clear"></div>
     <hr>
@@ -196,7 +166,7 @@
 </div>
 
 <!-- JS ======================================================= --> 
-<script type="text/javascript" src="js/jquery-1.8.0.js" ></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/corefunctions.js"></script>
 <script type="text/javascript" src="js/responsivetables.min.js"></script>

@@ -3,7 +3,7 @@
 ##Description
 
 
-This template is to be used as a starting point for developing responsive web designs. This is for front end developers who have a good understanding of how to build a site, and just prefer a starting point. Resize the demo on a computer to see the nav change, or just check it out on your mobile device.
+I built this tool for my own front-end development projects. My goal was to include everything I need, and strip out anything I don't. This provides a lightweight starting point for web development.
 
 
 ##Demo

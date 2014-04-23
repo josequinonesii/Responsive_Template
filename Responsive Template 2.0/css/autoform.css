@@ -1,0 +1,59 @@
+/************************/
+/*       WRAPPER        */
+/************************/
+.form-table {}
+
+/************************/
+/*       VALIDATION     */
+/************************/
+.form-errors {
+	font-weight: bold;
+	color:#bd000b;
+}
+/* asterisk */
+.form-field-required {
+	color:#bd000b;
+}
+/* applies to specific fiels with errors */
+.form-field-error {
+	border:2px solid #bd000b;
+}
+
+/************************/
+/*        LABELS        */
+/************************/
+.form-field-textbox-name {
+	display: block;
+}
+.form-field-name {
+	display: block;
+}
+
+/************************/
+/*        FIELDS        */
+/************************/
+.form-field-text,
+.form-field-textarea {
+    outline:none;
+    border:2px solid #ccc;
+    padding:4px;
+    margin:2px 0;
+}
+.form-field-text:focus,
+.form-field-textarea:focus {
+
+}
+.form-field-select {}
+.form-field-submit {}
+.form-field-radio {}
+/* around each checkbox, not entire set */
+.form-field-checkbox-wrap {}
+.form-field-checkbox {}
+.form-field-submit {
+    display: block;
+    outline: none;
+    border:0;
+}
+.form-field-submit:hover {
+    cursor: pointer;
+}
