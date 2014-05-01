@@ -73,30 +73,34 @@ $(document).ready(function() {
                 'opacity': '1'
             });
         }
+        event.preventDefault();
     });
 
     // Open First Level Mobile Menues
-    $(document).on('click', '.mobile-nav > li > .indicator', function() {
+    $(document).on('click', '.mobile-nav > li > .indicator', function(event) {
         $('.mobile-nav ul').not($(this).parent().find('ul:first')).slideUp();
         $(this).addClass('indicator-active').removeClass('indicator');
         $(this).parent().find('ul:first').slideDown(function() {
             overlayFixer();
         });
         $('.indicator-active').not(this).removeClass('indicator-active').addClass('indicator');
+        event.preventDefault();
     });
 
     // Open Sub Level Mobile Menues
-    $(document).on('click', '.mobile-nav > li > ul .indicator', function() {
+    $(document).on('click', '.mobile-nav > li > ul .indicator', function(event) {
         $(this).addClass('indicator-active').removeClass('indicator');
         $(this).parent().find('ul:first').slideDown(function() {
             overlayFixer();
         });
+        event.preventDefault();
     });
 
     // Close Menues
-    $(document).on('click', '.mobile-nav .indicator-active', function() {
+    $(document).on('click', '.mobile-nav .indicator-active', function(event) {
         $(this).addClass('indicator').removeClass('indicator-active');
         $(this).parent().find('ul:first').slideUp();
+        event.preventDefault();
     });
 
 });
