@@ -238,8 +238,11 @@ body, html {
 /* If off-screen, reposition */
 .nav-reposition {
     left:auto!important;
-    right:100%;
+    right:0;
 }
+ .main-nav > ul > li > ul .nav-reposition{
+    right:100%;
+ }
 /* Any sub-level dropdown links */
 .main-nav > ul > li > ul > li > ul a {
     display:block;

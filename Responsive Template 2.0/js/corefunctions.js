@@ -9,7 +9,7 @@ $(document).ready(function() {
                 $(this).find('> ul').slideDown(150);
 
                 var absoluteLeft = $(this).find('> ul').offset().left;
-                var absoluteRight = absoluteLeft + $(this).outerWidth();
+                var absoluteRight = absoluteLeft + $(this).find('> ul').outerWidth();
                 var viewportRight = $(window).width() + $(window).scrollLeft();
 
                 if (absoluteRight > viewportRight) {
