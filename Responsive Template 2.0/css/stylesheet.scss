@@ -25,9 +25,6 @@ body, html {
     font-size:18px;
     -webkit-font-smoothing:antialiased;
     line-height: 1.5em;
-}
-
-.content {
     h1 {
         font-size: 1.6em;
         margin:20px 0;
@@ -151,11 +148,6 @@ body, html {
 /* ----------------------------- */
 /*        Main Navigation        */
 /* ----------------------------- */
-.main-nav {
-    max-width:960px;
-    background:#8A9099;
-    margin:0 auto;
-}
 
 .arrow {
     font-size: 7px;
@@ -164,6 +156,9 @@ body, html {
 }
 
 .main-nav {
+    max-width:960px;
+    background:#8A9099;
+    margin:0 auto;
     li {position:relative;}
 
     /* Main Links */
