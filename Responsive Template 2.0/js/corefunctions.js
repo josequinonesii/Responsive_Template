@@ -29,78 +29,54 @@ $(document).ready(function() {
     // Append down-arrows for parents
     $('.main-nav li:has(> ul)').find(">:first-child").append(' <span class="arrow">▼</span>');
     // Populate mobile nav html
-    $('body').append('<a href="#" id="overlay-mobile"></a><div id="mobile"><nav class="mobile-nav-wrap"><ul class="mobile-nav">' + navHtml + '</ul></nav></div><div id="mobile-btn-wrap"><a href="#" id="mobile-btn-active"><i class="fa fa-times"></i></a><a href="#" id="mobile-btn-inactive"><i class="fa fa-bars"></i></a></div>');
-    $('.mobile-nav li:has(> ul)').find(">:first-child").parent().append('<div class="indicator"><i class="fa fa-chevron-down"></i></div>');
+    $('body').append('<a href="#" id="mobile-overlay"></a><div id="mobile"><nav><a href="#" id="mobile-cancel"><span></span><span></span></a><ul class="mobile-nav">' + navHtml + '</ul></nav></div>');
+
+    $('.mobile-nav li:has(> ul)').find(">:first-child").after('<div class="indicator"><i class="fa fa-angle-down"></i></div>');
 
     // Function to make sure overlay covers the page
     function overlayFixer() {
-
-        var overlayHeight = $('#overlay-mobile').height(),
+        var overlayHeight = $('#mobile-overlay').height(),
             viewportHeight = $(document).height();
         if (viewportHeight > overlayHeight) {
 
-            $('#overlay-mobile').css('height', viewportHeight);
+            $('#mobile-overlay').css('height', viewportHeight);
         }
     }
 
-    // Mobile opener & closer
-    $(document.body).on('click', '#mobile-btn-wrap, #overlay-mobile', function(event) {
-        var isClosed = parseInt($('#overlay-mobile').css('left'));
-        if (isClosed == 0) {
-            $('#mobile').css({
-                'transform': 'translate(0px,0px)'
-            });
-            $('#mobile-btn-wrap').css({
-                'transform': 'rotate(0deg)'
-            });
-            $('#overlay-mobile').css({
-                'opacity': '0'
-            });
-            setTimeout( function(){
-              $('#overlay-mobile').css({
-                'left': '-100%'
-            });
-            },500);
+    // Mobile dropdowns
+    $(document.body).on('click', '.indicator', function(event) {
+        if ($(this).parent().find('ul:first').is(":visible")) {
+            $(this).parent().find('ul:first').velocity("slideUp", { duration: 300 });
+            $(this).velocity({rotateZ: 0});
         } else {
-            $('#mobile').css({
-                'transform': 'translate(255px,0px)'
-            });
-            $('#mobile-btn-wrap').css({
-                'transform': 'rotate(-90deg)'
-            });
-            $('#overlay-mobile').css({
-                'left': '0%',
-                'opacity': '1'
-            });
+            $(this).parent().find('ul:first').velocity("slideDown", { duration: 300 });
+            $(this).velocity({rotateZ: -180});
         }
-        event.preventDefault();
     });
 
-    // Open First Level Mobile Menues
-    $(document).on('click', '.mobile-nav > li > .indicator', function(event) {
-        $('.mobile-nav ul').not($(this).parent().find('ul:first')).slideUp();
-        $(this).addClass('indicator-active').removeClass('indicator');
-        $(this).parent().find('ul:first').slideDown(function() {
-            overlayFixer();
+    // Mobile Open
+    $(document.body).on('click', '#mobile-open', function(event) {
+        $('#mobile-overlay').velocity("slideDown", { duration: 300 });
+        $('#mobile').show();
+        $('.mobile-nav > li').each(function(i) {
+            $(this).delay((i++) * 100).velocity("fadeIn", { duration: 300 });
         });
-        $('.indicator-active').not(this).removeClass('indicator-active').addClass('indicator');
-        event.preventDefault();
-    });
-
-    // Open Sub Level Mobile Menues
-    $(document).on('click', '.mobile-nav > li > ul .indicator', function(event) {
-        $(this).addClass('indicator-active').removeClass('indicator');
-        $(this).parent().find('ul:first').slideDown(function() {
-            overlayFixer();
+        $('#mobile-cancel').velocity({
+            rotateZ: 45,
+            opacity: 1
         });
-        event.preventDefault();
     });
 
-    // Close Menues
-    $(document).on('click', '.mobile-nav .indicator-active', function(event) {
-        $(this).addClass('indicator').removeClass('indicator-active');
-        $(this).parent().find('ul:first').slideUp();
-        event.preventDefault();
+    // Mobile Close
+    $(document.body).on('click', '#mobile-cancel', function(event) {
+        $('#mobile-cancel').velocity({
+            rotateZ: 0,
+            opacity: 0
+        });
+        $('#mobile-overlay, #mobile, .mobile-nav > li').velocity("slideUp", { duration: 300 });
     });
 
+    $('.form-field-submit').click(function(){
+        $(this).replaceWith('<div class="sending"><i class="fa fa-circle-o-notch fa-spin"></i> Sending...</div>');
+    });
 });

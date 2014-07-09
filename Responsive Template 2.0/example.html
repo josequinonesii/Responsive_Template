@@ -31,6 +31,7 @@
 
 </head>
 <body>
+    <a href="#" id="mobile-open"><i class="fa fa-bars"></i><br>MENU</a>
 	<nav class="main-nav">
     <ul>
         <li><a href="#">Level One A</a>
@@ -72,7 +73,7 @@
 
 <div class="content">
     <h1>Responsive Design Template</h1>
-
+    
     I built this tool for my own front-end development projects. My goal was to include everything I need, and strip out anything I don't. This provides a lightweight starting point for web development. <br>
     <i>- <a href="http://www.kthornbloom.com" target="_blank">Kevin Thornbloom</a></i>
     <hr>
@@ -106,46 +107,7 @@
     <img src="images/test.jpg" class="float-left"/>
     I personally use classes of ".float-right" and ".float-left" for my page images. These will be placed as they're named, but will resize down smaller if needed.
     <div class="clear"></div>
-    <hr>
-    <h3>Fix Big Fat Tables</h3>
-    This template inludes code to watch out for tables that are breaking your layout. If one is found, it will be replaced with a button to view the table in a new tab. Just add a class of "rwd-table" to the tables you'd like to apply this to.<br><br>
-    <table class="rwd-table" width="100%">
-        <tr>
-            <td>HeresAReallyLongTableCellTitle</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-        </tr>
-        <tr>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-        </tr>
-        <tr>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-        </tr>
-        <tr>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-            <td>Table Test</td>
-        </tr>
-    </table>
-    <hr>
-    <h3>Embedded Content? Yes Please.</h3>
-    Create a div with a class of "responsive-iframe-container" and place your iframe embedded maps, videos, etc within.
-    <div class="responsive-iframe-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10505.516726119811!2d2.3604254179077038!3d48.831905602629305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67203662b56eb%3A0xfbf6c2655b1b2077!2sQuartier+de+la+Gare!5e0!3m2!1sen!2sus!4v1389210802078" width="400" height="300" frameborder="0" style="border:0"></iframe>
-
-    </div>
+   
     <hr>
     <h3>Sample Social Media Icons</h3>
     <div class="soc">
@@ -169,12 +131,7 @@
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/corefunctions.js"></script>
-<script type="text/javascript" src="js/responsivetables.min.js"></script>
-<script type="text/javascript">
-	$(window).load( function() {
-		$(document).responsiveTables();
-	});
-</script>
+<script type="text/javascript" src="js/jquery.velocity.min.js"></script>
 <!-- add media queries for IE 8 -->
 <!--[if lte IE 8]>
 <script type="text/javascript" src="js/respond.min.js"></script>
