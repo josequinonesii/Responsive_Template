@@ -29,7 +29,7 @@ $(document).ready(function() {
     // Append down-arrows for parents
     $('.main-nav li:has(> ul)').find(">:first-child").append(' <span class="arrow">▼</span>');
     // Populate mobile nav html
-    $('body').append('<a href="#" id="mobile-overlay"></a><div id="mobile"><nav><a href="#" id="mobile-cancel"><span></span><span></span></a><ul class="mobile-nav">' + navHtml + '</ul></nav></div>');
+    $('body').append('<a href="#" id="mobile-open"><i class="fa fa-bars"></i><br>MENU</a><a href="#" id="mobile-overlay"></a><div id="mobile"><nav><a href="#" id="mobile-cancel"><span></span><span></span></a><ul class="mobile-nav">' + navHtml + '</ul></nav></div>');
 
     $('.mobile-nav li:has(> ul)').find(">:first-child").after('<div class="indicator"><i class="fa fa-angle-down"></i></div>');
 
@@ -74,9 +74,5 @@ $(document).ready(function() {
             opacity: 0
         });
         $('#mobile-overlay, #mobile, .mobile-nav > li').velocity("slideUp", { duration: 300 });
-    });
-
-    $('.form-field-submit').click(function(){
-        $(this).replaceWith('<div class="sending"><i class="fa fa-circle-o-notch fa-spin"></i> Sending...</div>');
     });
 });
