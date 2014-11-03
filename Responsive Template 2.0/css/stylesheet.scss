@@ -115,7 +115,11 @@ Y8b  d8 `8b  d8' 88  V888    88    88.     88  V888    88
         background: #eee;
     }
 } /* end .content */
-
+.content:after {
+    content:'';
+    display:block;
+    clear:both;
+}
 /*
 .d8888.  .d88b.   .o88b. d888888b  .d8b.  db      
 88'  YP .8P  Y8. d8P  Y8   `88'   d8' `8b 88      
@@ -393,27 +397,6 @@ d8888b. d88888b .d8888. d8888b.  .d88b.  d8b   db .d8888. d888888b db    db d888
 88   YD Y88888P `8888Y' 88       `Y88P'  VP   V8P `8888Y' Y888888P    YP    Y88888P 
 */
 
-.responsive-table{
-    overflow:hidden;
-    border-bottom:0;
-} 
-
-.table-hider {
-    overflow:hidden;
-    padding-right:1px;
-}
-.viewtable {
-    display:block;
-    border: 2px solid #ccc;
-    color: #fff!important;
-    text-align:center;
-    padding:10px;
-    text-decoration:none;
-}
-.viewtable:hover {
-    background:#222;
-    color:#fff!important;
-}
 .responsive-iframe-container {
     position: relative;
     padding-bottom: 56.25%; // This is the aspect ratio
