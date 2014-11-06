@@ -12,6 +12,7 @@ http://rwd.kthornbloom.com/
 ##Why is it Awesome?
 
 - Add Multi-Level Nav Dropdowns with an unordered list.
+- Velocity.js for faster animations.
 - Automatically creates off-canvas mobile nav for small screens
 - Includes Font Awesome 4
 - Ready for many various responsive element types
