@@ -21,13 +21,11 @@ http://rwd.kthornbloom.com/
 
 ##Requirements
 
-- The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or Opera. IE9+ should be mostly supported.(Old versions of IE should still work, but will be missing out on some of the responsive features.)
-- The site must be built fluidly. (does not require horizontal scrollbars).
-- In mobile view, the page content should preferably be longer than the navigation sidebar for best effect.
+- The responsive portions of this website require a recent version of Firefox, Chrome, Safari, or IE.
+- The site must be built fluidly. (use max-width instead of width in your CSS).
 
 ##Licensing
-Free to use & abuse, although respect the licenses of the individuals listed in the credits section below.
-If you end up using this template for something, shoot me a link! I'd love to see your work.
+Free to use & modify. If you end up using this template for something, shoot me a link! I'd love to see your work.
 
 ##Help & Feedback
 Connect with me on <a href="https://twitter.com/kthornbloom" target="_blank">twitter.</a>
