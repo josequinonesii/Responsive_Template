@@ -52,6 +52,7 @@ $(document).ready(function() {
             $(this).parent().find('ul:first').velocity("slideDown", { duration: 300 });
             $(this).velocity({rotateZ: -180});
         }
+        event.preventDefault();
     });
 
     // Mobile Open
@@ -73,6 +74,7 @@ $(document).ready(function() {
             rotateZ: 0,
             opacity: 0
         });
-        $('#mobile-overlay, #mobile, .mobile-nav > li').velocity("slideUp", { duration: 300 });
+        $('#mobile-overlay, #mobile, .mobile-nav > li').velocity("slideUp", { duration: 300 });       
+        event.preventDefault();
     });
 });
