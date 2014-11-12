@@ -1,4 +1,4 @@
-$(document).ready(function() {
+﻿$(document).ready(function() {
     // Hover Main Nav
     $(".main-nav li").hover(
         // Reposition if off screen
@@ -66,6 +66,7 @@ $(document).ready(function() {
             rotateZ: 45,
             opacity: 1
         });
+        event.preventDefault();
     });
 
     // Mobile Close
