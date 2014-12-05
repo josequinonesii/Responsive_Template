@@ -57,8 +57,9 @@
 
     // Mobile Open
     $(document.body).on('click', '#mobile-open', function(event) {
+        var amtScrolled = $(window).scrollTop();
         $('#mobile-overlay').velocity("slideDown", { duration: 300 });
-        $('#mobile').show();
+        $('#mobile').show().css('paddingTop',amtScrolled);
         $('.mobile-nav > li').each(function(i) {
             $(this).delay((i++) * 100).velocity("fadeIn", { duration: 300 });
         });
