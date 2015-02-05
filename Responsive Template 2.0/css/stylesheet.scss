@@ -1,6 +1,5 @@
 @import 'reset';
 @import 'autoform';
-@import url(http://fonts.googleapis.com/css?family=Raleway:300);
 $primary-color:#000;
 $secondary-color:#000;
 
@@ -279,7 +278,6 @@ YP  YP  YP  `Y88P'  Y8888P' Y888888P Y88888P Y88888P      VP   V8P YP   YP    YP
     color: #fff;
     text-decoration: none;
     font-size: 12px;
-    font-family: 'Raleway', sans-serif;
     display: none;
     text-align: center;
     position: fixed;
@@ -314,8 +312,7 @@ YP  YP  YP  `Y88P'  Y8888P' Y888888P Y88888P Y88888P      VP   V8P YP   YP    YP
         color: #FFF;
         text-decoration: none;
         font-size: 18px;
-        padding: 20px 5px;        
-        font-family: 'Raleway', sans-serif;
+        padding: 20px 5px;
         display: block;
     }
     .indicator {
@@ -350,7 +347,6 @@ YP  YP  YP  `Y88P'  Y8888P' Y888888P Y88888P Y88888P      VP   V8P YP   YP    YP
         text-decoration: none;
         font-size: 14px;
         padding: 15px;
-        font-family: 'Raleway', sans-serif;
         display: block;
         position:relative;
         border-left:2px solid rgba(255, 255, 255, 0.25);
