@@ -4,16 +4,33 @@ $primary-color:#000;
 $secondary-color:#000;
 
 html {
-    height:100%;
+	height:100%;
 }
 
 body, html {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-    min-height:100%;
-    width:100%;
-    position: relative;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	min-height:100%;
+	width:100%;
+	position: relative;
 }
+/*
+db   db d88888b  .d8b.  d8888b. 
+88   88 88'     d8' `8b 88  `8D 
+88ooo88 88ooooo 88ooo88 88   88 
+88~~~88 88~~~~~ 88~~~88 88   88 
+88   88 88.     88   88 88  .8D 
+YP   YP Y88888P YP   YP Y8888D' 
+*/
+
+/*
+.d8888. d888888b d8888b. d88888b 
+88'  YP   `88'   88  `8D 88'     
+`8bo.      88    88   88 88ooooo 
+  `Y8b.    88    88   88 88~~~~~ 
+db   8D   .88.   88  .8D 88.     
+`8888Y' Y888888P Y8888D' Y88888P 
+*/
 
 /*
  .o88b.  .d88b.  d8b   db d888888b d88888b d8b   db d888888b 
@@ -25,100 +42,110 @@ Y8b  d8 `8b  d8' 88  V888    88    88.     88  V888    88
 */
 
 .content {
-    max-width: 900px;
-    margin:0 auto;
-    padding:30px 30px 30px 30px;
-    color:#3c3c3c;
-    font-size:18px;
-    -webkit-font-smoothing:antialiased;
-    line-height: 1.5em;
-    h1 {
-        font-size: 1.6em;
-        margin:20px 0;
-    }
+	max-width: 900px;
+	margin:0 auto;
+	padding:30px 30px 30px 30px;
+	color:#3c3c3c;
+	font-size:18px;
+	-webkit-font-smoothing:antialiased;
+	line-height: 1.5em;
+	h1 {
+		font-size: 1.6em;
+		margin:20px 0;
+	}
 
-    h1:first-of-type {
-        margin-top:0;
-    }
+	h1:first-of-type {
+		margin-top:0;
+	}
 
-    h2 {
-        font-size: 1.4em;
-        margin:20px 0;
-    }
+	h2 {
+		font-size: 1.4em;
+		margin:20px 0;
+	}
 
-    h3 {
-        font-size: 1.2em;
-        margin:20px 0;
-    }
+	h3 {
+		font-size: 1.2em;
+		margin:20px 0;
+	}
 
-    a:link,
-    a:visited {
-        color:#000;
-    }
-    a:hover {
-        color:#222;
-    }
+	a:link,
+	a:visited {
+		color:#000;
+	}
+	a:hover {
+		color:#222;
+	}
 
-    ul,
-    ol {
-        padding:15px 25px;
-        overflow:hidden; /*fix for next to floated items */
-    }
+	ul,
+	ol {
+		padding:15px 25px;
+		overflow:hidden; /*fix for next to floated items */
+	}
 
-    ul li {
-        list-style:circle;
-    }
+	ul li {
+		list-style:circle;
+	}
 
-    ol li {
-        list-style: decimal;
-    }
+	ol li {
+		list-style: decimal;
+	}
 
-    blockquote {
-        display: block;
-        background: #222;
-        color: #fff;
-        padding: 15px;
-        margin:10px;
-        float: right;
-        max-width: 250px;
-        font-family: serif;
-        font-style: italic;
-        position: relative;
-    }
-    .float-right {
-        float:right;
-        max-width: 100%;
-        height: auto;
-        margin:15px 5px 5px 15px;
-        border-radius:2px;
-        box-shadow:0 0 0 5px #eee
-    }
-    .float-left {
-        @extend .float-right;
-        margin:15px 15px 5px 5px;
-        float:left;
-    }
-    hr {
-        border:none;
-        border-top:1px solid #eee;
-        margin:30px -30px;
-    }
-    table {
-        border-collapse:collapse;
-    }
-    td {
-        border:1px solid #ccc;
-        padding:10px;
-    }
-    tr:nth-child(2n) {
-        background: #eee;
-    }
+	blockquote {
+		display: block;
+		background: #222;
+		color: #fff;
+		padding: 15px;
+		margin:10px;
+		float: right;
+		max-width: 250px;
+		font-family: serif;
+		font-style: italic;
+		position: relative;
+	}
+	.float-right {
+		float:right;
+		max-width: 100%;
+		height: auto;
+		margin:15px 5px 5px 15px;
+		border-radius:2px;
+		box-shadow:0 0 0 5px #eee
+	}
+	.float-left {
+		@extend .float-right;
+		margin:15px 15px 5px 5px;
+		float:left;
+	}
+	hr {
+		border:none;
+		border-top:1px solid #eee;
+		margin:30px -30px;
+	}
+	table {
+		border-collapse:collapse;
+	}
+	td {
+		border:1px solid #ccc;
+		padding:10px;
+	}
+	tr:nth-child(2n) {
+		background: #eee;
+	}
 } /* end .content */
 .content:after {
-    content:'';
-    display:block;
-    clear:both;
+	content:'';
+	display:block;
+	clear:both;
 }
+
+/*
+d88888b  .d88b.   .d88b.  d888888b 
+88'     .8P  Y8. .8P  Y8. `~~88~~' 
+88ooo   88    88 88    88    88    
+88~~~   88    88 88    88    88    
+88      `8b  d8' `8b  d8'    88    
+YP       `Y88P'   `Y88P'     YP    
+*/
+
 /*
 .d8888.  .d88b.   .o88b. d888888b  .d8b.  db      
 88'  YP .8P  Y8. d8P  Y8   `88'   d8' `8b 88      
@@ -129,29 +156,29 @@ db   8D `8b  d8' Y8b  d8   .88.   88   88 88booo.
 */
 
 .soc {
-    background: #eee;
-    padding: 2px;
-    line-height: 0;
-    border-radius: 20px;
-    display: inline-block;
+	background: #eee;
+	padding: 2px;
+	line-height: 0;
+	border-radius: 20px;
+	display: inline-block;
 }
 .soc a:link, .soc a:visited {
-    display: inline-block;
-    margin:2px 1px;
-    background:#fff;
-    border-radius:20px;
+	display: inline-block;
+	margin:2px 1px;
+	background:#fff;
+	border-radius:20px;
 }
 .soc i {
-    border-radius:20px;
-    color:#fff;
-    width:30px;
-    height:30px;
-    display:inline-block;
-    text-align: center;
-    line-height: 30px;
+	border-radius:20px;
+	color:#fff;
+	width:30px;
+	height:30px;
+	display:inline-block;
+	text-align: center;
+	line-height: 30px;
 }
 .soc i:hover {
-    opacity: .7;
+	opacity: .7;
 }
 .soc-facebook {background:#3660a0;}
 .soc-twitter {background:#2daae1;}
@@ -173,76 +200,76 @@ YP  YP  YP YP   YP Y888888P VP   V8P      VP   V8P YP   YP    YP
 */
 
 .arrow {
-    font-size: 7px;
-    top: -2px;
-    position: relative;
+	font-size: 7px;
+	top: -2px;
+	position: relative;
 }
 
 .main-nav {
-    max-width:960px;
-    background:#8A9099;
-    margin:0 auto;
-    li {position:relative;}
+	max-width:960px;
+	background:#8A9099;
+	margin:0 auto;
+	li {position:relative;}
 
-    /* Main Links */
-    > ul > li > a {
-        display:inline-block;
-        color:#fff;
-        text-decoration: none;
-        padding:10px;
-    }
-    /* Hover or has open dropdown */
-    > ul > li a:hover,
-    .nav-parent {
-        background:rgba(0,0,0,.2)!important;
-    }
-    > ul > li {
-        display:inline-block;
-        position:relative;
-    }
-    /* First level dropdown container*/
-    > ul > li > ul {
-        position:absolute;
-        left:0;    
-        background:#a5acb5;
-        display: none;
-    }
-    /* First level dropdown link */
-    > ul > li > ul > li > a {
-        min-width:150px;
-        display:block;
-        padding:10px 5px;
-        border-bottom: 1px solid #fff;
-        font-size:.9em;
-        text-decoration:none; 
-        color:#fff;
-    }
-    /* Any sub-level dropdown containers*/
-    > ul > li > ul ul {
-        position: absolute;
-        left: 100%;
-        top: 0;    
-        background: #bbc3ce;
-        display: none;
-    }
-    /* If off-screen, reposition */
-    .nav-reposition {
-        left:auto!important;
-        right:0;
-    }
-    > ul > li > ul .nav-reposition{
-    right:100%;
-    }
-    /* Any sub-level dropdown links */
-    > ul > li > ul > li > ul a {
-        display:block;
-        min-width:150px;
-        padding:10px 5px;
-        border-bottom: 1px solid #fff;
-        font-size:.9em;
-        text-decoration:none; 
-        color:#fff;
-    }
+	/* Main Links */
+	> ul > li > a {
+		display:inline-block;
+		color:#fff;
+		text-decoration: none;
+		padding:10px;
+	}
+	/* Hover or has open dropdown */
+	> ul > li a:hover,
+	.nav-parent {
+		background:rgba(0,0,0,.2)!important;
+	}
+	> ul > li {
+		display:inline-block;
+		position:relative;
+	}
+	/* First level dropdown container*/
+	> ul > li > ul {
+		position:absolute;
+		left:0;    
+		background:#a5acb5;
+		display: none;
+	}
+	/* First level dropdown link */
+	> ul > li > ul > li > a {
+		min-width:150px;
+		display:block;
+		padding:10px 5px;
+		border-bottom: 1px solid #fff;
+		font-size:.9em;
+		text-decoration:none; 
+		color:#fff;
+	}
+	/* Any sub-level dropdown containers*/
+	> ul > li > ul ul {
+		position: absolute;
+		left: 100%;
+		top: 0;    
+		background: #bbc3ce;
+		display: none;
+	}
+	/* If off-screen, reposition */
+	.nav-reposition {
+		left:auto!important;
+		right:0;
+	}
+	> ul > li > ul .nav-reposition{
+	right:100%;
+	}
+	/* Any sub-level dropdown links */
+	> ul > li > ul > li > ul a {
+		display:block;
+		min-width:150px;
+		padding:10px 5px;
+		border-bottom: 1px solid #fff;
+		font-size:.9em;
+		text-decoration:none; 
+		color:#fff;
+	}
 }
 
 /*
@@ -254,135 +281,135 @@ YP  YP  YP YP   YP Y888888P VP   V8P      VP   V8P YP   YP    YP
 YP  YP  YP  `Y88P'  Y8888P' Y888888P Y88888P Y88888P      VP   V8P YP   YP    YP    
 */
 #mobile-overlay {
-    background:rgba(12, 158, 135, 0.94);
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    display: none;
+	background:rgba(12, 158, 135, 0.94);
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display: none;
 }
 
 #mobile {
-    display: none;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    text-align:center;    
-    margin-top: 20px;
+	display: none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	text-align:center;    
+	margin-top: 20px;
 }
 #mobile-open {
-    background: #000;
-    padding: 5px 0;
-    color: #fff;
-    text-decoration: none;
-    font-size: 12px;
-    display: none;
-    text-align: center;
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    i {
-        vertical-align:middle;
-        font-size:28px;
-    }
+	background: #000;
+	padding: 5px 0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	display: none;
+	text-align: center;
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	i {
+		vertical-align:middle;
+		font-size:28px;
+	}
 }
 .mobile-bar:after {
-    content:'';
-    clear:both;
-    display:block;
+	content:'';
+	clear:both;
+	display:block;
 }
 .mobile-nav {
-    margin:0 auto;
-    width:250px;
-    text-align:left;
-    /* LEVEL ONE */
-    ul {
-        display: none;
-    }
-    >li {
-        display: none;
-        padding:0 30px 0px 0px;
-        position: relative;
-       // border-bottom:1px solid rgba(255, 255, 255, 0.25);
-    }
-    >li>a:link, >li>a:visited {
-        color: #FFF;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 20px 5px;
-        display: block;
-    }
-    .indicator {
-        color: #FFF;
-        font-size: 28px;
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        top: 15px;
-        width:30px;
-        text-align:center;
-        z-index: 1;
-        cursor:pointer;
-        transform-origin:50% 50%;
-        -ms-transform-origin:50% 50%;
-        -moz-transform-origin:50% 50%;
-        -webkit-transform-origin:50% 50%;
+	margin:0 auto;
+	width:250px;
+	text-align:left;
+	/* LEVEL ONE */
+	ul {
+		display: none;
+	}
+	>li {
+		display: none;
+		padding:0 30px 0px 0px;
+		position: relative;
+	   // border-bottom:1px solid rgba(255, 255, 255, 0.25);
+	}
+	>li>a:link, >li>a:visited {
+		color: #FFF;
+		text-decoration: none;
+		font-size: 18px;
+		padding: 20px 5px;
+		display: block;
+	}
+	.indicator {
+		color: #FFF;
+		font-size: 28px;
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 15px;
+		width:30px;
+		text-align:center;
+		z-index: 1;
+		cursor:pointer;
+		transform-origin:50% 50%;
+		-ms-transform-origin:50% 50%;
+		-moz-transform-origin:50% 50%;
+		-webkit-transform-origin:50% 50%;
 
-    }
-    /* LEVEL TWO */
-    >li>ul li {
-        position:relative;
-        padding-right:30px;
-    }
-    >li ul {
-        padding:0 0 0 15px;
-        margin-right:-30px;
-        border-top: 2px solid rgba(255,255,255,.25);
-    }
-    >li>ul a:link, >li>ul a:visited {
-        color: #FFF;
-        text-decoration: none;
-        font-size: 14px;
-        padding: 15px;
-        display: block;
-        position:relative;
-        border-left:2px solid rgba(255, 255, 255, 0.25);
-    }
-    >li>ul a:before {
-        content: '';
-        background: rgba(255, 255, 255, 0.25);
-        height: 2px;
-        width: 7px;
-        position: absolute;
-        left: 0;
-        top: 20px;
-    }
+	}
+	/* LEVEL TWO */
+	>li>ul li {
+		position:relative;
+		padding-right:30px;
+	}
+	>li ul {
+		padding:0 0 0 15px;
+		margin-right:-30px;
+		border-top: 2px solid rgba(255,255,255,.25);
+	}
+	>li>ul a:link, >li>ul a:visited {
+		color: #FFF;
+		text-decoration: none;
+		font-size: 14px;
+		padding: 15px;
+		display: block;
+		position:relative;
+		border-left:2px solid rgba(255, 255, 255, 0.25);
+	}
+	>li>ul a:before {
+		content: '';
+		background: rgba(255, 255, 255, 0.25);
+		height: 2px;
+		width: 7px;
+		position: absolute;
+		left: 0;
+		top: 20px;
+	}
 }
 #mobile-cancel {
-    display:inline-block;
-    width:50px;
-    height:50px;
-    position:relative;
-    opacity:0;
-    span {
-        width: 50px;
-        height: 2px;
-        background: #fff;
-        display: block;
-        position: absolute;
-        top: 24px;
-    }
-    span:last-child {
-        background: #fff;
-        width: 2px;
-        height: 50px;
-        position: absolute;
-        right: 24px;
-        top: 0;
-    }
+	display:inline-block;
+	width:50px;
+	height:50px;
+	position:relative;
+	opacity:0;
+	span {
+		width: 50px;
+		height: 2px;
+		background: #fff;
+		display: block;
+		position: absolute;
+		top: 24px;
+	}
+	span:last-child {
+		background: #fff;
+		width: 2px;
+		height: 50px;
+		position: absolute;
+		right: 24px;
+		top: 0;
+	}
 }
 /*
 d8888b. d88888b .d8888. d8888b.  .d88b.  d8b   db .d8888. d888888b db    db d88888b 
@@ -394,32 +421,32 @@ d8888b. d88888b .d8888. d8888b.  .d88b.  d8b   db .d8888. d888888b db    db d888
 */
 
 .responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-    iframe,   
-    object,  
-    embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }
+	position: relative;
+	padding-bottom: 56.25%; // This is the aspect ratio
+	height: 0;
+	overflow: hidden;
+	iframe,   
+	object,  
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        padding-top:50px;
-    }
-    .main-nav {
-        display: none;
-    }
-    #mobile-open {
-        display: block;
-    }
-    .float-left, .float-right {
-        margin:10px 0;
-    }
+	body {
+		padding-top:50px;
+	}
+	.main-nav {
+		display: none;
+	}
+	#mobile-open {
+		display: block;
+	}
+	.float-left, .float-right {
+		margin:10px 0;
+	}
 }
